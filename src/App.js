@@ -3,12 +3,22 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import LinearLineGraphDemo from './LinearLineGraph';
 import MonthlyLineGraphDemo from './MonthlyLineGraph';
+import AnnualNorthGraph from './AnnualNorth';
+import MonthNorthGraph from './MonthNorth';
+import AnnualSouthGraph from './AnnualSouth';
+import MonthSouthGraph from './MonthSouth';
+
 const URL = 'http://localhost:3001/v1data'
 
 
 function App() {
   const [annualData, setannualData] = useState([])
   const [monthlyData, setmonthlyData] = useState([])
+  const [AnnualNorth, setAnnualNorth] = useState([])
+  const [MonthNorth, setMonthNorth] = useState([])
+  const [AnnualSouth, setAnnualSouth] = useState([])
+  const [MonthSouth, setMonthSouth] = useState([])
+  
 
   useEffect (() => {
     axios.get(URL)
@@ -16,6 +26,10 @@ function App() {
       debugger
       setannualData(response.data.annualData)
       setmonthlyData(response.data.monthlyData)
+      setAnnualNorth(response.data.AnnualNorth) 
+      setMonthNorth(response.data.MonthNorth) 
+      setAnnualSouth(response.data.AnnualSouth)
+      setMonthSouth(response.data.MonthSouth)       
     }).catch (error => {
       alert(error.response.data.error)
     })
@@ -35,6 +49,10 @@ function App() {
      
       <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
+      <AnnualNorthGraph defineData = {AnnualNorth} />
+      <MonthNorthGraph defaultData = {MonthNorth} />
+      <AnnualSouthGraph southData = {AnnualSouth} />
+      <MonthSouthGraph mineData = {MonthSouth} />
     </div>
     
   );

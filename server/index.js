@@ -31,15 +31,25 @@ app.get("/v1data",async function (req,res) {
         const connection = await mysql.createConnection(config.db)
         const [monthlyData,] = await connection.execute('select * from MonthlyData')
         const [annualData,] = await connection.execute('select * from annualData')
+        const [AnnualNorth,] = await connection.execute('select * from annual_north')
+        const [MonthNorth,] = await connection.execute('select * from month_north')
+        const [AnnualSouth,] = await connection.execute('select * from annual_south')
+        const [MonthSouth,] = await connection.execute('select * from month_south')
         if (!monthlyData) monthlyData=[] 
-        if (!annualData) annualData=[] 
+        if (!annualData) annualData=[]
+        if (!AnnualNorth) AnnualNorth=[]
+        if (!MonthNorth) MonthNorth=[]
+        if (!AnnualSouth) AnnualSouth=[] 
+        if (!MonthSouth) MonthSouth=[]   
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
         res.status(200).json(result)
         **/
        res.json({
-        test: ['my array'],
-        test2: "something else",
+        AnnualNorth: AnnualNorth,
+        AnnualSouth: AnnualSouth,
+        MonthNorth: MonthNorth,
+        MonthSouth: MonthSouth,
         monthlyData: monthlyData,
         annualData: annualData
        });
