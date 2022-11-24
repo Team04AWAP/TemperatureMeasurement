@@ -49,7 +49,7 @@ export default function MonthlyLineGraphDemo(props) {
 
   return (
     <div style={{ width: "1000px" }}>
-      <h1>MonthlyLineGraph</h1>
+      <h1>MonthlyGlobalLineGraph</h1>
       <Line options={options} data={data} />
     </div>
   );

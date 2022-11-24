@@ -45,7 +45,7 @@ export default function AnnualNorthGraph(props) {
 
   return (
     <div style={{ width: "1000px" }}>
-      <h1>VisualizationLineGraph</h1>
+      <h1>AnnualNorthLineGraph</h1>
       <Line options={options} data={data} />
     </div>
   );

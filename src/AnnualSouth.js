@@ -45,7 +45,7 @@ export default function AnnualSouthGraph(props) {
 
   return (
     <div style={{ width: "1000px" }}>
-      <h1>VisualizationSouthLineGraph</h1>
+      <h1>AnnualSouthLineGraph</h1>
       <Line options={options} data={data} />
     </div>
   );
