@@ -11,8 +11,8 @@ export default function MonthSouthGraph(props) {
         label: "Temperature (degree)",
         //data: [...co2data].reverse(),
         data: props.mineData,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#B7FA42",
+        backgroundColor: "#B7FA42",
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",

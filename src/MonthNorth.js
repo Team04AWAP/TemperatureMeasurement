@@ -11,8 +11,8 @@ export default function MonthNorthGraph(props) {
         label: "Temperature (degree)",
         //data: [...co2data].reverse(),
         data: props.defaultData,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#2BFAD9",
+        backgroundColor: "#2BFAD9",
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",
