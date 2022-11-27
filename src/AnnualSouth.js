@@ -16,7 +16,7 @@ export default function AnnualSouthGraph(props) {
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",
-          yAxisKey: "Temparature",
+          yAxisKey: "Temperature",
         },
         pointRadius: 1,
       },
