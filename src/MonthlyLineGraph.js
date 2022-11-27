@@ -11,8 +11,8 @@ export default function MonthlyLineGraphDemo(props) {
         label: "Temperature (degree)",
         //data: [...co2data].reverse(),
         data: props.ownData,
-        borderColor: "rgba(245, 76, 222,96)",
-        backgroundColor: "rgba(245, 76, 222, 0.5)",
+        borderColor: "#40A2F5",
+        backgroundColor: "#40A2F5",
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",
