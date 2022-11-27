@@ -11,8 +11,8 @@ export default function LinearLineGraphDemo(props) {
         label: "Temperature (degree)",
         //data: [...co2data].reverse(),
         data: props.myData,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#C22F29",
+        backgroundColor: "#C22F29",
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",

@@ -11,8 +11,8 @@ export default function AnnualNorthGraph(props) {
         label: "Temperature (degree)",
         //data: [...co2data].reverse(),
         data: props.defineData,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#825FFA",
+        backgroundColor: "#825FFA",
         yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",
