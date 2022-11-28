@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <h3> Global historical surface temperature</h3>
+      <h3> Temperature Fact</h3>
       
       {/* <ul>
         {annualData.map(annualData => (
@@ -53,7 +53,7 @@ function App() {
       </ul> */}
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth} />
      
-     {/* <LinearLineGraphDemo myData = {annualData} />
+     {/*<LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
       <AnnualNorthGraph defineData = {AnnualNorth} />
       <MonthNorthGraph defaultData = {MonthNorth} />
