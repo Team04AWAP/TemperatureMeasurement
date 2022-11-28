@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <h3> Temperature Fact</h3>
+      <h3> Global historical surface temperature</h3>
       
       {/* <ul>
         {annualData.map(annualData => (

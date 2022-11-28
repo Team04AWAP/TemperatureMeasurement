@@ -114,7 +114,7 @@ export default function MixChartGraph(props) {
 
   return (
     <div style={{ width: "1000px" }}>
-      <h1>MixGraph</h1>
+      <h1>Global Annual and Monthly surface temperature</h1>
       <Line options={options} data={data} />
     </div>
   );
