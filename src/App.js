@@ -7,6 +7,7 @@ import AnnualNorthGraph from './AnnualNorth';
 import MonthNorthGraph from './MonthNorth';
 import AnnualSouthGraph from './AnnualSouth';
 import MonthSouthGraph from './MonthSouth';
+import MixChartGraph from './MixChart';
 
 const URL = 'http://localhost:3001/v1data'
 
@@ -18,6 +19,8 @@ function App() {
   const [MonthNorth, setMonthNorth] = useState([])
   const [AnnualSouth, setAnnualSouth] = useState([])
   const [MonthSouth, setMonthSouth] = useState([])
+ 
+  
   
 
   useEffect (() => {
@@ -29,7 +32,9 @@ function App() {
       setAnnualNorth(response.data.AnnualNorth) 
       setMonthNorth(response.data.MonthNorth) 
       setAnnualSouth(response.data.AnnualSouth)
-      setMonthSouth(response.data.MonthSouth)       
+      setMonthSouth(response.data.MonthSouth)
+      
+           
     }).catch (error => {
       alert(error.response.data.error)
     })
@@ -46,6 +51,7 @@ function App() {
           <li key = {annualData}>{annualData.Time}, {annualData.Temparature}</li>
         ))}
       </ul> */}
+      <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth} />
      
       <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
@@ -53,6 +59,7 @@ function App() {
       <MonthNorthGraph defaultData = {MonthNorth} />
       <AnnualSouthGraph southData = {AnnualSouth} />
       <MonthSouthGraph mineData = {MonthSouth} />
+     
     </div>
     
   );
