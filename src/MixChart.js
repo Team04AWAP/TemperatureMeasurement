@@ -85,6 +85,19 @@ export default function MixChartGraph(props) {
             },
             pointRadius: 1,
           },
+          {
+            label: "2000 year Temperature",
+            //data: [...co2data].reverse(),
+            data: props.data7,
+            borderColor: "#9F9147",
+            backgroundColor: "#9F9147",
+            yAxisID: "Temperature",
+            parsing: {
+              xAxisKey: "Time",
+              yAxisKey: "Temperature",
+            },
+            pointRadius: 1,
+          },
     ],
   };
 
