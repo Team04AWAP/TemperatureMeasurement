@@ -126,7 +126,7 @@ export default function MixChartGraph(props) {
   };
 
   return (
-    <div style={{ width: "1000px" }}>
+    <div  style={{ width: "100%" }}>
       <h1>Annual and Monthly surface temperature</h1>
       <Line options={options} data={data} />
     </div>
