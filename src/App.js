@@ -8,6 +8,12 @@ import MonthNorthGraph from './MonthNorth';
 import AnnualSouthGraph from './AnnualSouth';
 import MonthSouthGraph from './MonthSouth';
 import MixChartGraph from './MixChart';
+import Header from './Header';
+import Home from './Home';
+import Login from './Login';
+import Register from './Register';
+
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const URL = 'http://localhost:3001/v1data'
 
@@ -41,9 +47,20 @@ function App() {
   }, [])
 
 
+
+
   return (
-    <div>
-      <h3> Temperature Fact</h3>
+      <Router>
+    <div className = "container">
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/register" element={<Register />}/>
+        </Routes>
+
+        <br></br>
+      <h3> Global historical surface temperature</h3>
       
       {/* <ul>
         {annualData.map(annualData => (
@@ -53,7 +70,7 @@ function App() {
       </ul> */}
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth} />
      
-     {/*<LinearLineGraphDemo myData = {annualData} />
+     {/* <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
       <AnnualNorthGraph defineData = {AnnualNorth} />
       <MonthNorthGraph defaultData = {MonthNorth} />
@@ -61,6 +78,7 @@ function App() {
     <MonthSouthGraph mineData = {MonthSouth} /> */}
      
     </div>
+    </Router>
     
   );
 }
