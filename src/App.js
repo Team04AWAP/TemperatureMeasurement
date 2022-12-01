@@ -8,7 +8,7 @@ import MonthNorthGraph from './MonthNorth';
 import AnnualSouthGraph from './AnnualSouth';
 import MonthSouthGraph from './MonthSouth';
 import MixChartGraph from './MixChart';
-//import TwoThosandGraph from './TwoThosandYears';
+import TwoThosandGraph from './TwoThosandYears';
 import Header from './Header';
 import Home from './Home';
 import Login from './Login';
@@ -26,7 +26,7 @@ function App() {
   const [MonthNorth, setMonthNorth] = useState([])
   const [AnnualSouth, setAnnualSouth] = useState([])
   const [MonthSouth, setMonthSouth] = useState([])
-  //const [TwoThousand, setTwoThousand] = useState([])
+  const [TwoThousand, setTwoThousand] = useState([])
  
   
   
@@ -41,7 +41,7 @@ function App() {
       setMonthNorth(response.data.MonthNorth) 
       setAnnualSouth(response.data.AnnualSouth)
       setMonthSouth(response.data.MonthSouth)
-      //setTwoThousand(response.data.TwoThousand)
+      setTwoThousand(response.data.TwoThousand)
       
            
     }).catch (error => {
@@ -71,7 +71,7 @@ function App() {
           <li key = {annualData}>{annualData.Time}, {annualData.Temparature}</li>
         ))}
       </ul> */}
-      <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  />
+      <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
      
      {/* <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
