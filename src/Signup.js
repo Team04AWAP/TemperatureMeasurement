@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Signup=(props)=>{
 
-    let history = useNavigate(); // Use for NAvigate on Pervious
+    let history = useNavigate(); // Use for Navigate on Pervious
     const [data, setData]=useState({
         first_name:"",
         last_name:"",
@@ -32,7 +32,7 @@ const submitForm=(e)=> {
 
     console.log(sendData);
 
-    axios.post("http://localhost:3001/v1data", sendData)
+    axios.post("http://localhost/index.php", sendData)
     .then((result)=>{
         if (result.data.Status == 'Invalid') {
         alert('Invalid User');
