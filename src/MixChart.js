@@ -116,7 +116,7 @@ export default function MixChartGraph(props) {
       x: {
         type: "time",
         time: {
-          unit: "month",
+          unit: "year",
         },
       },
       yAxis: {
