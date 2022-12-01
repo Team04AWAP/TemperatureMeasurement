@@ -39,14 +39,17 @@ app.get("/v1data",async function (req,res) {
         const [MonthNorth,] = await connection.execute('select * from month_north')
         const [AnnualSouth,] = await connection.execute('select * from annual_south')
         const [MonthSouth,] = await connection.execute('select * from month_south')
-        //const [TwoThousand,] = await connection.execute('select * from YearsTemperature')
+        const [TwoThousand,] = await connection.execute('select * from YearsTemperature')
+        const [str1,] = await connection.execute('select Time from YearsTemperature')
         if (!monthlyData) monthlyData=[] 
         if (!annualData) annualData=[]
         if (!AnnualNorth) AnnualNorth=[]
         if (!MonthNorth) MonthNorth=[]
         if (!AnnualSouth) AnnualSouth=[] 
         if (!MonthSouth) MonthSouth=[]
-        //if (!TwoThousand) TwoThousand=[]    
+        if (!TwoThousand) TwoThousand=[]
+        if (!str1) str1=[]
+
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
         res.status(200).json(result)
@@ -57,8 +60,9 @@ app.get("/v1data",async function (req,res) {
         MonthNorth: MonthNorth,
         MonthSouth: MonthSouth,
         monthlyData: monthlyData,
-        //TwoThousand: TwoThousand,
-        annualData: annualData
+        TwoThousand: TwoThousand,
+        annualData: annualData,
+        str1: str1.toString()
        });
         
     } catch(err) {
