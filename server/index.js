@@ -46,6 +46,7 @@ app.get("/v1data",async function (req,res) {
         const [iceCoreDe2,] = await connection.execute('select * from icecorede2')
         const [iceCoreDss,] = await connection.execute('select * from iceCoreDss')
         const [vostokIce,] = await connection.execute('select * from vostokIceCore')
+        const [IceCoreYears,] = await connection.execute('select * from iceCore800K')
         if (!monthlyData) monthlyData=[] 
         if (!annualData) annualData=[]
         if (!AnnualNorth) AnnualNorth=[]
@@ -58,7 +59,8 @@ app.get("/v1data",async function (req,res) {
         if (!iceCoreDe) iceCoreDe=[] 
         if (!iceCoreDe2) iceCoreDe2=[]
         if (!iceCoreDss) iceCoreDss=[] 
-        if (!vostokIce) vostokIce=[]          
+        if (!vostokIce) vostokIce=[]  
+        if (!IceCoreYears) IceCoreYears=[]      
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
         res.status(200).json(result)
@@ -76,7 +78,8 @@ app.get("/v1data",async function (req,res) {
         iceCoreDe: iceCoreDe,
         iceCoreDe2: iceCoreDe2,
         iceCoreDss: iceCoreDss,
-        vostokIce: vostokIce
+        vostokIce: vostokIce,
+        IceCoreYears: IceCoreYears
        });
         
     } catch(err) {

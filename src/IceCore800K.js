@@ -3,14 +3,14 @@ import { Chart } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 
 
-export default function VostokIceCore(props) {
+export default function IceCoreKGraph(props) {
   //console.log(props.myData);
   const data = {
     datasets: [
       {
         label: "Co2 Measurements,(417160 - 2342)BC",
         //data: [...co2data].reverse(),
-        data: props.vostok,
+        data: [...props.iceCoreK].reverse(),
         borderColor: "#825FFA",
         backgroundColor: "#825FFA",
         yAxisID: "Co2",
@@ -31,7 +31,7 @@ export default function VostokIceCore(props) {
       },
       title: {
         display: true,
-        text: "Vostok Ice Core Co2 Measurements",
+        text: "Ice Core 880k Composite Study Co2 Measurements",
       },
     },
     scales: {
@@ -45,7 +45,7 @@ export default function VostokIceCore(props) {
 
   return (
     <div style={{ width: "100%" }}>
-      <h1>Visualization 5</h1>
+      <h1>Visualization 6</h1>
       <Line options={options} data={data} />
     </div>
   );

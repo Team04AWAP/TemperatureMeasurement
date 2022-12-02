@@ -10,6 +10,7 @@ import MonthSouthGraph from './MonthSouth';
 import MixChartGraph from './MixChart';
 import Co2MonthGraphdemo from './Co2graphv3';
 import VostokIceCore from './VostokIce';
+import IceCoreKGraph from './IceCore800K';
 import TwoThosandGraph from './TwoThosandYears';
 import Header from './Header';
 import Home from './Home';
@@ -35,6 +36,7 @@ function App() {
   const [iceCoreDe2, seticeCoreDe2] = useState([])
   const [iceCoreDss, seticeCoreDss] = useState([])
   const [vostokIce, setvostokIce] = useState([])
+  const [IceCoreYears, setIceCoreyears] = useState([])
  
   
   
@@ -56,6 +58,7 @@ function App() {
       seticeCoreDe2(response.data.iceCoreDe2)
       seticeCoreDss(response.data.iceCoreDss)
       setvostokIce(response.data.vostokIce)
+      setIceCoreyears(response.data.IceCoreYears)
       
            
     }).catch (error => {
@@ -90,6 +93,7 @@ function App() {
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
      
      <VostokIceCore vostok = {vostokIce} />
+     <IceCoreKGraph iceCoreK = {IceCoreYears} />
      {/* <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
       <AnnualNorthGraph defineData = {AnnualNorth} />
