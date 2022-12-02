@@ -23,7 +23,7 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Annually Co2 Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2Data2,
+        data: props.co2data2,
         borderColor: "#C22F29",
         backgroundColor: "#C22F29",
         yAxisID: "Co2",

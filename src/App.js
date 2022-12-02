@@ -9,6 +9,7 @@ import AnnualSouthGraph from './AnnualSouth';
 import MonthSouthGraph from './MonthSouth';
 import MixChartGraph from './MixChart';
 import Co2MonthGraphdemo from './Co2graphv3';
+import VostokIceCore from './VostokIce';
 import TwoThosandGraph from './TwoThosandYears';
 import Header from './Header';
 import Home from './Home';
@@ -33,6 +34,7 @@ function App() {
   const [iceCoreDe, seticeCoreDe] = useState([])
   const [iceCoreDe2, seticeCoreDe2] = useState([])
   const [iceCoreDss, seticeCoreDss] = useState([])
+  const [vostokIce, setvostokIce] = useState([])
  
   
   
@@ -53,6 +55,7 @@ function App() {
       seticeCoreDe(response.data.iceCoreDe)
       seticeCoreDe2(response.data.iceCoreDe2)
       seticeCoreDss(response.data.iceCoreDss)
+      setvostokIce(response.data.vostokIce)
       
            
     }).catch (error => {
@@ -74,7 +77,7 @@ function App() {
         </Routes>
 
         <br></br>
-      <h3> Global historical surface temperature</h3>
+      <h1> Visualizations:</h1>
       
       {/* <ul>
         {annualData.map(annualData => (
@@ -83,7 +86,10 @@ function App() {
         ))}
       </ul> */}
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
+     
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
+     
+     <VostokIceCore vostok = {vostokIce} />
      {/* <LinearLineGraphDemo myData = {annualData} />
       <MonthlyLineGraphDemo ownData = {monthlyData} />
       <AnnualNorthGraph defineData = {AnnualNorth} />
