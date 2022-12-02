@@ -8,7 +8,7 @@ export default function IceCoreKGraph(props) {
   const data = {
     datasets: [
       {
-        label: "Co2 Measurements,(417160 - 2342)BC",
+        label: "Co2 Measurements,(800K years)",
         //data: [...co2data].reverse(),
         data: [...props.iceCoreK].reverse(),
         borderColor: "#825FFA",
