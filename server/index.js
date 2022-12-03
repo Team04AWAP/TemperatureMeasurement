@@ -68,4 +68,30 @@ app.get("/v1data",async function (req,res) {
     }
 })
 
+
+
+/*app.get("/v2data",async function (req,res) {
+    try { 
+        const connection = await mysql.createConnection(config.db)
+        const [signUp,] = await connection.execute('select * from react-login') // await waits for the process to be done and then shows the output
+       
+        if (!signUp) signUp=[] 
+        
+
+        /*const [result,] = await connection.execute('select * from annualData')
+        if (!result) result=[] 
+        res.status(200).json(result)
+        **/
+      // res.json({
+       // signUp: signUp
+       //}); 
+
+        
+//    } catch(err) {
+
+        
+  //      res.status(500).json({error: err.message})
+  //  }
+//})
+
 app.listen(port)

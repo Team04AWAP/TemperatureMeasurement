@@ -32,7 +32,7 @@ const submitForm=(e)=> {
 
     console.log(sendData);
 
-    axios.post("http://localhost/index.php", sendData)
+    axios.post("http://localhost:3001/v2data", sendData)
     .then((result)=>{
         if (result.data.Status == 'Invalid') {
         alert('Invalid User');

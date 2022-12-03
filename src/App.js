@@ -17,6 +17,7 @@ import Signup from './Signup';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const URL = 'http://localhost:3001/v1data'
+const URL2 = 'http://localhost:3001/v2data'
 
 
 function App() {
