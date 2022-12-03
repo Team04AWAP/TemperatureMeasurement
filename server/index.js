@@ -40,13 +40,27 @@ app.get("/v1data",async function (req,res) {
         const [AnnualSouth,] = await connection.execute('select * from annual_south')
         const [MonthSouth,] = await connection.execute('select * from month_south')
         const [TwoThousand,] = await connection.execute('select * from YearsTemperature')
+        const [co2Month,] = await connection.execute('select * from co2Month')
+        const [co2Annual,] = await connection.execute('select * from co2Annual')
+        const [iceCoreDe,] = await connection.execute('select * from iceCorede')
+        const [iceCoreDe2,] = await connection.execute('select * from icecorede2')
+        const [iceCoreDss,] = await connection.execute('select * from iceCoreDss')
+        const [vostokIce,] = await connection.execute('select * from vostokIceCore')
+        const [IceCoreYears,] = await connection.execute('select * from iceCore800K')
         if (!monthlyData) monthlyData=[] 
         if (!annualData) annualData=[]
         if (!AnnualNorth) AnnualNorth=[]
         if (!MonthNorth) MonthNorth=[]
         if (!AnnualSouth) AnnualSouth=[] 
         if (!MonthSouth) MonthSouth=[]
-        if (!TwoThousand) TwoThousand=[]    
+        if (!TwoThousand) TwoThousand=[] 
+        if (!co2Month) co2Month=[] 
+        if (!co2Annual) co2Annual=[] 
+        if (!iceCoreDe) iceCoreDe=[] 
+        if (!iceCoreDe2) iceCoreDe2=[]
+        if (!iceCoreDss) iceCoreDss=[] 
+        if (!vostokIce) vostokIce=[]  
+        if (!IceCoreYears) IceCoreYears=[]      
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
         res.status(200).json(result)
@@ -58,7 +72,14 @@ app.get("/v1data",async function (req,res) {
         MonthSouth: MonthSouth,
         monthlyData: monthlyData,
         TwoThousand: TwoThousand,
-        annualData: annualData
+        annualData: annualData,
+        co2Month: co2Month,
+        co2Annual: co2Annual,
+        iceCoreDe: iceCoreDe,
+        iceCoreDe2: iceCoreDe2,
+        iceCoreDss: iceCoreDss,
+        vostokIce: vostokIce,
+        IceCoreYears: IceCoreYears
        });
         
     } catch(err) {

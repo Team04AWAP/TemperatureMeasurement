@@ -109,7 +109,7 @@ export default function MixChartGraph(props) {
       },
       title: {
         display: true,
-        text: "Temperature Anomalies from 1850",
+        text: "Global historical surface temperature",
       },
     },
   scales: {
@@ -127,7 +127,7 @@ export default function MixChartGraph(props) {
 
   return (
     <div  style={{ width: "100%" }}>
-      <h1>Annual and Monthly surface temperature</h1>
+      <h1>Visualization 1 & 2</h1>
       <Line options={options} data={data} />
     </div>
   );
