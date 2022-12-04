@@ -44,7 +44,7 @@ export default function VostokIceCore(props) {
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "80%" }}>
       <h1>Visualization 5</h1>
       <Line options={options} data={data} />
     </div>

@@ -47,6 +47,8 @@ app.get("/v1data",async function (req,res) {
         const [iceCoreDss,] = await connection.execute('select * from iceCoreDss')
         const [vostokIce,] = await connection.execute('select * from vostokIceCore')
         const [IceCoreYears,] = await connection.execute('select * from iceCore800K')
+        const [TwoMillionTemperature,] = await connection.execute('select * from 2mYearTemperature')
+        const [TwoMillionCo2,] = await connection.execute('select * from 2mYearCo2')
         if (!monthlyData) monthlyData=[] 
         if (!annualData) annualData=[]
         if (!AnnualNorth) AnnualNorth=[]
@@ -60,7 +62,10 @@ app.get("/v1data",async function (req,res) {
         if (!iceCoreDe2) iceCoreDe2=[]
         if (!iceCoreDss) iceCoreDss=[] 
         if (!vostokIce) vostokIce=[]  
-        if (!IceCoreYears) IceCoreYears=[]      
+        if (!IceCoreYears) IceCoreYears=[]   
+        if (!TwoMillionTemperature) TwoMillionTemperature=[]   
+        if (!TwoMillionCo2) TwoMillionCo2=[]  
+     
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
         res.status(200).json(result)
@@ -79,7 +84,9 @@ app.get("/v1data",async function (req,res) {
         iceCoreDe2: iceCoreDe2,
         iceCoreDss: iceCoreDss,
         vostokIce: vostokIce,
-        IceCoreYears: IceCoreYears
+        IceCoreYears: IceCoreYears,
+        TwoMillionTemperature: TwoMillionTemperature,
+        TwoMillionCo2: TwoMillionCo2
        });
         
     } catch(err) {

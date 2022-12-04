@@ -94,14 +94,15 @@ export default function Co2MonthGraphdemo(props) {
           unit: "month",
         },
       },
-      yAxis: {
+      y: {
+        stacked: true,
         type: "linear",
       },
     },
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "80%" }}>
       <h1>Visualization 3 & 4 </h1>
       <Line options={options} data={data} />
     </div>

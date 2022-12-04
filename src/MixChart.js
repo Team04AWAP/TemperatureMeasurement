@@ -1,5 +1,5 @@
 import React from "react";
-import { Chart } from "chart.js/auto";
+//import { Chart } from "chart.js/auto";
 import "chartjs-adapter-luxon";
 import { Line } from "react-chartjs-2";
 
@@ -126,7 +126,7 @@ export default function MixChartGraph(props) {
   };
 
   return (
-    <div  style={{ width: "100%" }}>
+    <div  style={{ width: "80%" }}>
       <h1>Visualization 1 & 2</h1>
       <Line options={options} data={data} />
     </div>

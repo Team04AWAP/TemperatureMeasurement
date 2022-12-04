@@ -1,26 +1,20 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import LinearLineGraphDemo from './LinearLineGraph';
-import MonthlyLineGraphDemo from './MonthlyLineGraph';
-import AnnualNorthGraph from './AnnualNorth';
-import MonthNorthGraph from './MonthNorth';
-import AnnualSouthGraph from './AnnualSouth';
-import MonthSouthGraph from './MonthSouth';
 import MixChartGraph from './MixChart';
 import Co2MonthGraphdemo from './Co2graphv3';
 import VostokIceCore from './VostokIce';
 import IceCoreKGraph from './IceCore800K';
-import TwoThosandGraph from './TwoThosandYears';
-import Header from './Header';
-import Home from './Home';
-import Login from './Login';
-import Signup from './Signup';
+import TwoMillionYearsGraphdemo from './TwoMillionYears';
+//import Header from './Header';
+//import Home from './Home';
+//import Login from './Login';
+//import Signup from './Signup';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+//import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const URL = 'http://localhost:3001/v1data'
-const URL2 = 'http://localhost:3001/v2data'
+
 
 
 function App() {
@@ -38,6 +32,9 @@ function App() {
   const [iceCoreDss, seticeCoreDss] = useState([])
   const [vostokIce, setvostokIce] = useState([])
   const [IceCoreYears, setIceCoreyears] = useState([])
+  const [TwoMillionTemperature, setTwoMillionTemperature] = useState([])
+  const [TwoMillionCo2, setTwoMillionCo2] = useState([])
+
  
   
   
@@ -60,6 +57,9 @@ function App() {
       seticeCoreDss(response.data.iceCoreDss)
       setvostokIce(response.data.vostokIce)
       setIceCoreyears(response.data.IceCoreYears)
+      setTwoMillionTemperature(response.data.TwoMillionTemperature)
+      setTwoMillionCo2(response.data.TwoMillionCo2)
+      
       
            
     }).catch (error => {
@@ -71,8 +71,9 @@ function App() {
 
 
   return (
-      <Router>
-    <div className = "container">
+     // <Router>
+     <div>
+      {/* <div className = "container">
         <Header/>
         <Routes>
           <Route path="/" element={<Home />}/>
@@ -81,30 +82,21 @@ function App() {
         </Routes>
 
         <br></br>
-      <h1> Visualizations:</h1>
+  <h1> Visualizations:</h1> */ }
       
-      {/* <ul>
-        {annualData.map(annualData => (
-
-          <li key = {annualData}>{annualData.Time}, {annualData.Temparature}</li>
-        ))}
-      </ul> */}
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
      
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
      
      <VostokIceCore vostok = {vostokIce} />
+
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
-     {/* <LinearLineGraphDemo myData = {annualData} />
-      <MonthlyLineGraphDemo ownData = {monthlyData} />
-      <AnnualNorthGraph defineData = {AnnualNorth} />
-      <MonthNorthGraph defaultData = {MonthNorth} />
-      <AnnualSouthGraph southData = {AnnualSouth} />
-    <MonthSouthGraph mineData = {MonthSouth} /> 
-    <TwoThousandGraph yearData = {TwoThosand} />*/}
+
+    {/* <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature} v7data2 = {TwoMillionCo2} /> */}
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
      
     </div>
-    </Router>
+   // </Router>
     
   );
 }
