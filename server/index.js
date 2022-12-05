@@ -97,6 +97,23 @@ app.get("/v1data",async function (req,res) {
     }
 })
 
+app.post("/signUp",async function (req,res) {
+    try { 
+        const connection = await mysql.createConnection(connect.db)
+        const email = await connection.execute('insert * into email ')
+        const Password = await connection.execute('insert * into Password ')
+        if (!email) email= {}
+        if (!Password) Password= {}
+        res.json({
+            email: email,
+            Password: Password
+    });
+} catch(err) {
+    
+    res.status(500).json({error: err.message})
+}
+})
+
 app.get("/signUp",async function (req,res) {
     try { 
         const connection = await mysql.createConnection(connect.db)

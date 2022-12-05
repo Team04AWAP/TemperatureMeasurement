@@ -6,10 +6,10 @@ const Signup=(props)=>{
 
     let history = useNavigate(); // Use for Navigate on Pervious
     const [data, setData]=useState({
-        first_name:"",
-        last_name:"",
+        //first_name:"",
+        //last_name:"",
         email:"",
-        password:""
+        Password:""
     })
 
     const handleChange=(e)=>{
@@ -23,16 +23,16 @@ const Signup=(props)=>{
 const submitForm=(e)=> {
     e.preventDefault();
     const sendData = {
-        first_name:data.first_name,
-        last_name:data.last_name,
+        //first_name:data.first_name,
+       // last_name:data.last_name,
         email:data.email,
-        password:data.password
+        Password:data.Password
 
     }
 
     console.log(sendData);
 
-    axios.post("http://localhost:3001/v2data", sendData)
+    axios.post("http://localhost:3001/signUp", sendData)
     .then((result)=>{
         if (result.data.Status == 'Invalid') {
         alert('Invalid User');
@@ -80,8 +80,8 @@ const submitForm=(e)=> {
 <div className="row">
             <div className="col-md-6">Password</div>
             <div className="col-md-6">
-                <input type="password" name="password" className="form-control"
-                onChange={handleChange} value={data.password}
+                <input type="Password" name="Password" className="form-control"
+                onChange={handleChange} value={data.Password}
                 />
             </div>
           </div>
