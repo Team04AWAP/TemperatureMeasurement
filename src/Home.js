@@ -62,7 +62,7 @@ const Home=()=>{
   }, [])
     return(
         <div>
-            <h1> Visualizations:</h1> 
+            <h1> Visualizations:(1-7)</h1> 
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button>Go for data description and dataset</button> </a>
@@ -89,8 +89,11 @@ const Home=()=>{
      <br>
      </br>
      <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button>Go for data description</button> </a>
-     
-        
+     <br>
+     </br>
+     <br>
+     </br>
+     <Link to = "Page"><button>Go for more visualizations</button> </Link>
         </div>
     )
 }
