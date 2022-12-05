@@ -6,6 +6,7 @@ const express = require('express')
 const cors = require('cors')
 const mysql = require('mysql2/promise')
 const config = require('./config')
+const connect = require('./connect')
 
 const app = express()
 
@@ -94,6 +95,21 @@ app.get("/v1data",async function (req,res) {
         
         res.status(500).json({error: err.message})
     }
+})
+
+app.get("/signUp",async function (req,res) {
+    try { 
+        const connection = await mysql.createConnection(connect.db)
+        const [logIn,] = await connection.execute('select * from logIn')
+        if (!logIn) logIn= []
+        res.json({
+            logIn: logIn
+    });
+} catch(err) {
+
+        
+    res.status(500).json({error: err.message})
+}
 })
 
 
