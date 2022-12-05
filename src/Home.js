@@ -5,6 +5,7 @@ import Co2MonthGraphdemo from './Co2graphv3';
 import VostokIceCore from './VostokIce';
 import IceCoreKGraph from './IceCore800K';
 import TwoMillionYearsGraphdemo from './TwoMillionYears';
+import { Link } from 'react-router-dom';
 
 const URL = 'http://localhost:3001/v1data'
 
@@ -62,17 +63,33 @@ const Home=()=>{
     return(
         <div>
             <h1> Visualizations:</h1> 
-      
+  
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
+    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button>Go for data description and dataset</button> </a>
      
+      
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
+     <a href = "https://www.nature.com/articles/nature03265"><button>Go for data measurement description</button> </a>
      
      <VostokIceCore vostok = {vostokIce} />
+     <a href = "https://gml.noaa.gov/ccgg/trends/data.html"><button>Go for data source</button> </a>
+     <br>
+     </br>
+     <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button>Go for data measurement description</button> </a>
+     
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
+     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button>Go for data source</button> </a>
+     <br>
+     </br>
+     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button>Go for data description</button> </a>
 
-   
      <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <a href = "http://carolynsnyder.com/publications.php"><button>Go for data source</button> </a>
+     <br>
+     </br>
+     <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button>Go for data description</button> </a>
+     
         
         </div>
     )
