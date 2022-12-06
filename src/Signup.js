@@ -34,7 +34,7 @@ const submitForm=(e)=> {
 
     axios.post("http://localhost:3001/signUp", sendData)
     .then((result)=>{
-        if (result.data.Status == 'Invalid') {
+        if (result.data.Status === 'Invalid') {
         alert('Invalid User');
         }
         else {
