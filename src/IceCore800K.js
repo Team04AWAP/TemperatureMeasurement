@@ -13,7 +13,7 @@ export default function IceCoreKGraph(props) {
         data: [...props.iceCoreK].reverse(),
         borderColor: "#825FFA",
         backgroundColor: "#825FFA",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -35,7 +35,7 @@ export default function IceCoreKGraph(props) {
       },
     },
     scales: {
-      Tempareture: {
+      y: {
         type: "linear",
         display: true,
         position: "left",

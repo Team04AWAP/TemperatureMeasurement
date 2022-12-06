@@ -30,7 +30,7 @@ const submitForm=(e)=> {
 
     }
 
-    console.log(sendData);
+    //console.log(sendData);
 
     axios.post("http://localhost:3001/signUp", sendData)
     .then((result)=>{

@@ -102,8 +102,8 @@ app.post("/signUp",async function (req,res) {
         const connection = await mysql.createConnection(connect.db)
         const email = await connection.execute('insert * into email ')
         const Password = await connection.execute('insert * into Password ')
-        if (!email) email= {}
-        if (!Password) Password= {}
+        if (!email) email= ({})
+        if (!Password) Password= ({})
         res.json({
             email: email,
             Password: Password

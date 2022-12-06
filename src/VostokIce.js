@@ -10,10 +10,10 @@ export default function VostokIceCore(props) {
       {
         label: "Co2 Measurements,(417160 - 2342)BC",
         //data: [...co2data].reverse(),
-        data: props.vostok,
+        data: [...props.vostok],
         borderColor: "#825FFA",
         backgroundColor: "#825FFA",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -35,10 +35,8 @@ export default function VostokIceCore(props) {
       },
     },
     scales: {
-      Tempareture: {
+      y: {
         type: "linear",
-        display: true,
-        position: "left",
       },
     },
   };

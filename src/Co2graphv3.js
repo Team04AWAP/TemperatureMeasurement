@@ -10,10 +10,10 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Monthly Co2 Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2data1,
+        data: [...props.co2data1],
         borderColor: "#2BFAD9",
         backgroundColor: "#2BFAD9",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -23,10 +23,10 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Annually Co2 Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2data2,
+        data: [...props.co2data2],
         borderColor: "#C22F29",
         backgroundColor: "#C22F29",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -36,10 +36,10 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Ice Core DE08 Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2data3,
+        data: [...props.co2data3],
         borderColor: "rgba(245, 76, 222,96)",
         backgroundColor: "rgba(245, 76, 222, 96)",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -49,10 +49,10 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Ice Core DE08-02 Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2data4,
+        data: [...props.co2data4],
         borderColor: "#825FFA",
         backgroundColor: "#825FFA",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -62,10 +62,10 @@ export default function Co2MonthGraphdemo(props) {
       {
         label: "Ice Core DSS Measurements",
         //data: [...co2data].reverse(),
-        data: props.co2data5,
+        data: [...props.co2data5],
         borderColor: "#9F9147",
         backgroundColor: "#9F9147",
-        yAxisID: "Co2",
+        //yAxisID: "Co2",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Co2",
@@ -95,7 +95,6 @@ export default function Co2MonthGraphdemo(props) {
         },
       },
       y: {
-        stacked: true,
         type: "linear",
       },
     },
