@@ -65,9 +65,10 @@ const Home=()=>{
             <h1> Visualizations:(1-7)</h1> 
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
-    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button>Go for data description and dataset</button> </a>
-    <p> 
-      Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
+    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html"><button> See the Dataset here!</button> </a>
+    
+    <p> Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
     2000-year temperature reconstruction.It is based on the Palaeoclimatological study of 2000 years of temperature. 
  The data used in the graph was reconstructed by “combining low-resolution proxies with tree-ring data, 
  using a wavelet transform technique to achieve timescale-dependent processing of the data.” ( Anders Moberg et al.) 
@@ -81,7 +82,6 @@ const Home=()=>{
      
       
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
-     <a href = "https://www.nature.com/articles/nature03265"><button>Go for data measurement description</button> </a>
      <p>
      Visualisation 3: The graph above in Visualisation 3, shows the mean data of monthly and annual 
      atmospheric carbon dioxide concentrations made on Mauna Loa, Hawaii, over a period
@@ -96,6 +96,8 @@ const Home=()=>{
           gradually increased in the atmosphere over the period of 65 years. The data collected
            can also be used to reflect on the global atmospheric concentrations.
      </p>
+     <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://gml.noaa.gov/ccgg/trends/"><button> See the Dataset here!</button> </a>
 
      <p> 
      Visualisaton 4: The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
@@ -113,26 +115,24 @@ const Home=()=>{
             In addition to this, Mauna Loa CO2 atmospheric concentration levels follows the same pattern as 
             the Antarctic ice core CO2 levels.
      </p>
+     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/lawdome.html"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button> See the Dataset here!</button> </a>
+
+     
      
      <VostokIceCore vostok = {vostokIce} />
-     <a href = "https://gml.noaa.gov/ccgg/trends/data.html"><button>Go for data source</button> </a>
-     <br>
-     </br>
-     <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button>Go for data measurement description</button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2"><button> See the Dataset here!</button> </a>
 
      
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
-     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button>Go for data source</button> </a>
-     <br>
-     </br>
-     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button>Go for data description</button> </a>
+    <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt"><button> See the Dataset here!</button> </a>
 
      <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
-     <a href = "http://carolynsnyder.com/publications.php"><button>Go for data source</button> </a>
-     <br>
-     </br>
-     <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button>Go for data description</button> </a>
+     <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "http://carolynsnyder.com/publications.php"><button> See the Dataset here!</button> </a>
      <br>
      </br>
      <br>
