@@ -50,8 +50,7 @@ app.get("/v1data",async function (req,res) {
         const [IceCoreYears,] = await connection.execute('select * from iceCore800K')
         const [TwoMillionTemperature,] = await connection.execute('select * from 2mYearTemperature')
         const [TwoMillionCo2,] = await connection.execute('select * from 2mYearCo2')
-        const [Doughnut,] = await connection.execute('select * from doughnutChart')
-        const [Doughnut2,] = await connection.execute('select * from doughnutChart2')
+       
         if (!monthlyData) monthlyData=[] 
         if (!annualData) annualData=[]
         if (!AnnualNorth) AnnualNorth=[]
@@ -68,8 +67,6 @@ app.get("/v1data",async function (req,res) {
         if (!IceCoreYears) IceCoreYears=[]   
         if (!TwoMillionTemperature) TwoMillionTemperature=[]   
         if (!TwoMillionCo2) TwoMillionCo2=[]  
-        if (!Doughnut) Doughnut=[]  
-        if (!Doughnut2) Doughnut2=[]  
      
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
@@ -91,9 +88,7 @@ app.get("/v1data",async function (req,res) {
         vostokIce: vostokIce,
         IceCoreYears: IceCoreYears,
         TwoMillionTemperature: TwoMillionTemperature,
-        TwoMillionCo2: TwoMillionCo2,
-        Doughnut: Doughnut,
-        Doughnut2: Doughnut2
+        TwoMillionCo2: TwoMillionCo2
        });
         
     } catch(err) {
@@ -134,7 +129,24 @@ app.get("/signUp",async function (req,res) {
     res.status(500).json({error: err.message})
 }
 })
-
+app.get("/v2data",async function (req,res) {
+    try { 
+        const connection = await mysql.createConnection(config.db)
+        const [Doughnut,] = await connection.execute('select * from doughnutChart')
+        const [Doughnut2,] = await connection.execute('select * from doughnutChart2')
+        if (!Doughnut) Doughnut=[]  
+        if (!Doughnut2) Doughnut2=[] 
+        res.json({ 
+            Doughnut: Doughnut,
+            Doughnut2: Doughnut2
+           });
+            
+        } catch(err) {
+    
+            
+            res.status(500).json({error: err.message})
+        }
+    })
 
 
 /*app.get("/v2data",async function (req,res) {

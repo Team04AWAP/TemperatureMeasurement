@@ -4,7 +4,7 @@ import DoughnutChartGraph from './DoughnutChart';
 import { Link } from 'react-router-dom';
 
 
-const URL = 'http://localhost:3001/v1data'
+const URL = 'http://localhost:3001/v2data'
 
 
 const Page =()=>{
