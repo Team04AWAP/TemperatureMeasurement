@@ -70,6 +70,7 @@ const Home=()=>{
     </br>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html"><button> See the Dataset here!</button> </a>
     
+    
     <p> Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
     2000-year temperature reconstruction.It is based on the Palaeoclimatological study of 2000 years of temperature. 
  The data used in the graph was reconstructed by “combining low-resolution proxies with tree-ring data, 
@@ -83,8 +84,17 @@ const Home=()=>{
 </p>
 <br>
     </br>
+    <a href = "https://bolin.su.se/data/moberg-2012-nh-1?n=moberg-2005"><button> Know more about the data mesaurements! </button> </a>
+    <br>
+    </br>
+    <a href = "https://www.nature.com/articles/nature03265"><button> Read more about data mesaurements!</button> </a>
+    <br>
+    </br>
+    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/moberg2005/nhtemp-moberg2005.txt"><button> See the Dataset here!</button> </a>
       
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
+
+     
      <p>
      Visualisation 3: The graph above in Visualisation 3, shows the mean data of monthly and annual 
      atmospheric carbon dioxide concentrations made on Mauna Loa, Hawaii, over a period
