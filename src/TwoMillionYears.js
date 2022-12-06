@@ -68,10 +68,10 @@ export default function TwoMillionYearsGraphdemo(props) {
       {
         label: "Temperature Measurements",
         //data: [...co2data].reverse(),
-        data: [props.v7data1].reverse,
+        data: [...props.v7data1].reverse(),
         borderColor: "#2BFAD9",
         backgroundColor: "#2BFAD9",
-        yAxisID: "Temperature",
+        //yAxisID: "Temperature",
         parsing: {
           xAxisKey: "Time",
           yAxisKey: "Temperature",
@@ -81,7 +81,7 @@ export default function TwoMillionYearsGraphdemo(props) {
       {
         label: "Co2 Measurements",
         //data: [...co2data].reverse(),
-        data: [props.v7data2].reverse,
+        data: [...props.v7data2].reverse(),
         borderColor: "#C22F29",
         backgroundColor: "#C22F29",
         yAxisID: "Co2",
@@ -108,18 +108,13 @@ export default function TwoMillionYearsGraphdemo(props) {
     },
     
   scales: {
-      x: {
-        type: "time",
-        time: {
-          unit: "year",
-        },
-      },
+   
       y: {
         type: 'linear',
         display: true,
         position: 'left',
       },
-      y1: {
+      y: {
         type: 'linear',
         display: true,
         position: 'right',
