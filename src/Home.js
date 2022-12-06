@@ -66,16 +66,60 @@ const Home=()=>{
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button>Go for data description and dataset</button> </a>
+    <p> 
+      Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
+    2000-year temperature reconstruction.It is based on the Palaeoclimatological study of 2000 years of temperature. 
+ The data used in the graph was reconstructed by “combining low-resolution proxies with tree-ring data, 
+ using a wavelet transform technique to achieve timescale-dependent processing of the data.” ( Anders Moberg et al.) 
+ It can be observed from the graph data that “high temperatures—similar to those observed in the 
+ twentieth century before 1990—occurred around AD 1000 to 1100, and minimum temperatures that are about 0.7 K 
+ below the average of 1961–90 occurred around AD 1600.” (Anders Moberg et al.) In V2 graph, represented with 
+ brown line graph we get to see the change in the Northern Hemisphere’s mean temperature over the period of 2000 years, 
+ where the x-axis of the graph represents the Time period in years and the y-axis of the graph represent the annual mean
+  Temperature in Celsius.
+</p>
      
       
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
      <a href = "https://www.nature.com/articles/nature03265"><button>Go for data measurement description</button> </a>
+     <p>
+     Visualisation 3: The graph above in Visualisation 3, shows the mean data of monthly and annual 
+     atmospheric carbon dioxide concentrations made on Mauna Loa, Hawaii, over a period
+      of 65 years. The time measurements started in the year 1958, C. David Keeling of
+       the Scripps Institution of Oceanography, and last for over a period of 65 years.
+        The x-axis of the graph represents the time, in years, and the y-axis represent 
+        the mean atmospheric carbon dioxide concentrations. If, observed closely it can
+         be seen from the Monthly CO2 concentrations, represented by blue line, that carbon
+          dioxide concentration levels increase during warm months, highest peak being in 
+          summer and decrease in colder months. Moreover, it can be observed from the Annual 
+          carbon dioxide concentration, represented with red line, shows that CO2 levels has 
+          gradually increased in the atmosphere over the period of 65 years. The data collected
+           can also be used to reflect on the global atmospheric concentrations.
+     </p>
+
+     <p> 
+     Visualisaton 4: The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
+      concentrations based on Antarctic ice cores, over a period ~1000 years. The data was recorded
+       over the period 1006 A.D.-1978 A.D., from the three ice cores DE08, DE08-02, and DSS, obtained
+        at Law Dome, East Antarctica from year 1987 to 1993. The line chart graph displays the three 
+        Ice Core dataset, each dataset represented with three different coloured lines, where pink 
+        line shows the Ice Core DE08, purple line shows Ice Core DE08-02, and brown line shows Ice Core 
+        DSS measurements. DE08, DE08-02, and DSS are the names of the ice sample code from the ice cores.
+         In the graph, x-axis represents the time, in years, and y-axis shows the atmospheric carbon dioxide
+          concentrations.  It can be observed from the graph CO2 levels were quite low during 1550-1800 A.D.,
+           the preindustrial age, probably because of colder global climate, (Etheridge et al. 1996). The Law 
+           Dome ice core CO2 data show major growth in atmospheric CO2 levels over the industrial period, as it
+            can also be observed from the graph as all three lines show an exponential growth around 1800s. 
+            In addition to this, Mauna Loa CO2 atmospheric concentration levels follows the same pattern as 
+            the Antarctic ice core CO2 levels.
+     </p>
      
      <VostokIceCore vostok = {vostokIce} />
      <a href = "https://gml.noaa.gov/ccgg/trends/data.html"><button>Go for data source</button> </a>
      <br>
      </br>
      <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button>Go for data measurement description</button> </a>
+
      
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
