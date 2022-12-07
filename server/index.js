@@ -109,9 +109,14 @@ app.post("/signUp",async function (req,res) {
         const Password = await connection.execute('insert * into Password ')
         if (!email) email= ({})
         if (!Password) Password= ({})
+        if (!firstname) firstname= ({})
+        if (!lastname) lastname= ({})
         res.json({
             email: email,
-            Password: Password
+            Password: Password,
+            firstname: firstname,
+            lastname: lastname
+
     });
 } catch(err) {
     
