@@ -168,6 +168,10 @@ const Home=()=>{
      
      <VostokIceCore vostok = {vostokIce} />
      <br></br>
+     <h5>Visualization 5:</h5>
+     <p> In visualization V5 we create the line graph of atmospheric carbon dioxide concentrations based on ice drilling conducted at Soviet Vostok station in the Antarctic. The dataset has a Time period of 400000 years. The horizontal Axis is representation the years. According to a previous ice-drilling project between Russia, the United States, and France at the Russian Vostok station East Antarctica yielded the deepest ice core ever recovered, reaching a depth of 3,623 m (Petit et al. 1997, 1999). 
+The graph shows Temperature in the Antarctic is closely correlated with CO2 levels in the atmosphere (Barnola et al. 1987). The expansion of the Vostok CO2 dataset demonstrates that the major CO2 trends for each glacial cycle are comparable. Transitions between glacial and interglacial periods are characterized by significant changes from the lowest to the greatest levels. The atmospheric CO2 concentrations increase during these transitions from 180 to 280–300 ppmv (Petit et al. 1999). In the past 30,000–40,000 years, there has been a good agreement between the Vostok ice core data and other ice core data (Delmas et al. 1980; Neftel et al. 1982). All the records show low CO2 values [200 parts per million by volume (ppmv)] during the Last Glacial Maximum and increased atmospheric CO2 concentrations associated with the glacial–Holocene transition. These measurements, according to Barnola et al. (1991) and Petit et al. (1999), show that the CO2 increase either was in phase with the Antarctic temperature at the beginning of the deglaciations or lagged by less than 1000 years, whereas it clearly lagged the temperature at the beginning of the glaciations.
+</p>
     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br><br></br>
@@ -178,6 +182,9 @@ const Home=()=>{
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
      <br></br>
+     <p>Visualization 6
+In V6 we created a line graph of atmospheric carbon dioxide concentrations based on a combined study of ice cores in the southern hemisphere. If we look at the graph the horizontal axis represents the years, and the graph illustrates the CO2 records using different air extraction methods and sections of the core. We have used Antarctic Ice Cores Revised 800KYr CO2 Data, which was obtained by European Project for Ice Coring in Antarctica Dome ice core from Dome C (EDC). The Antarctic composite ice core atmospheric CO2 is shown over 800,000 years, including some very recent studies, e.g., covering the last glacial cycle.
+</p>
     <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br><br></br>
@@ -186,6 +193,9 @@ const Home=()=>{
     </br><br></br>
     
      <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> <br></br>
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <p>Visualization 7: In Visualization 7 we created a multi-axis line chart, where we plotted the temperature record from the available 2m year period in combination with the available co2 measurements from the 800k year period. The horizontal axis represents the time in years, and the right vertical axis represents the change in temperature and the left vertical axis is showing the change in the Co2 ppm axis. The multi-line chart graph displays the data in two different colors, where cyan color is showing the temperature and the red color is showing C02.
+Only a few discrete windows of time in history of the world’s temperature have been accurately rebuilt, and continuous reconstructions of time in history throughout glacial cycles are still difficult. At the mid- Pleistocene transition, the switch from quasi-100,000-year glacial cycles to quasi-100,000-year glacial cycles may have been a prerequisite, albeit it is likely not the only causative process. A new reconstruction is compared to radiative forcing from greenhouse gases to assess the sensitivity of the Earth system, which is estimated to alter by 9 degrees Celsius (with a range of 7 to 13 degrees Celsius) every doubling of atmospheric carbon dioxide over millennia</p>
      <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br><br></br>
