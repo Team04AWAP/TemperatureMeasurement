@@ -65,14 +65,19 @@ const Home=()=>{
             <h1> Visualizations:(1-7)</h1> 
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
+    <br></br>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button> Know more about the data mesaurements! </button> </a>
-    <br>
-    </br>
+    <br></br>
+    <br></br>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html"><button> See the Dataset here!</button> </a>
-    <br>
-    </br>
+    <br></br>
+      <br></br>
+      <div id='Vis2'>
 
-    <p> Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
+        <h6>Visualisaton 2:</h6>
+      
+
+      <p>  The graph of Visualisation 2 represents the Northern Hemisphere’s
     2000-year temperature reconstruction.It is based on the Palaeoclimatological study of 2000 years of temperature. 
  The data used in the graph was reconstructed by “combining low-resolution proxies with tree-ring data, 
  using a wavelet transform technique to achieve timescale-dependent processing of the data.” ( Anders Moberg et al.) 
@@ -83,25 +88,35 @@ const Home=()=>{
  where the x-axis of the graph represents the Time period in years and the y-axis of the graph represent the annual mean
   Temperature in Celsius.
 </p>
+
+      </div>
+   
 <br>
     </br>
     <a href = "https://bolin.su.se/data/moberg-2012-nh-1?n=moberg-2005"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br>
+    <br></br>
     <a href = "https://www.nature.com/articles/nature03265"><button> Read more about data mesaurements!</button> </a>
     <br>
     </br>
+    <br></br>
     <a href = "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/moberg2005/nhtemp-moberg2005.txt"><button> See the Dataset here!</button> </a>
     <br>
     </br>
+    <br></br>
       
 
 
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
-     <br>
-    </br>
+     <br></br>
+     <br></br>
+
+     <div id='Vis3'>
+      <br></br>
+     <h6>Visualisation 3:</h6>
      <p>
-     Visualisation 3: The graph above in Visualisation 3, shows the mean data of monthly and annual 
+      The graph above in Visualisation 3, shows the mean data of monthly and annual 
      atmospheric carbon dioxide concentrations made on Mauna Loa, Hawaii, over a period
       of 65 years. The time measurements started in the year 1958, C. David Keeling of
        the Scripps Institution of Oceanography, and last for over a period of 65 years.
@@ -114,14 +129,19 @@ const Home=()=>{
           gradually increased in the atmosphere over the period of 65 years. The data collected
            can also be used to reflect on the global atmospheric concentrations.
      </p>
+     </div>
+     
      <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br>
+    <br></br>
     <a href = "https://gml.noaa.gov/ccgg/trends/"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
-     <p> 
-     Visualisaton 4: The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
+    </br> <br></br>
+    <div id='Vis4'>
+      <h6>Visualisaton 4:</h6>
+    <p> 
+      The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
       concentrations based on Antarctic ice cores, over a period ~1000 years. The data was recorded
        over the period 1006 A.D.-1978 A.D., from the three ice cores DE08, DE08-02, and DSS, obtained
         at Law Dome, East Antarctica from year 1987 to 1993. The line chart graph displays the three 
@@ -136,44 +156,58 @@ const Home=()=>{
             In addition to this, Mauna Loa CO2 atmospheric concentration levels follows the same pattern as 
             the Antarctic ice core CO2 levels.
      </p>
+    </div>
+     
      <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/lawdome.html"><button> Know more about the data mesaurements! </button> </a>
      <br>
-    </br>
+    </br><br></br>
     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
      
      
      <VostokIceCore vostok = {vostokIce} />
+<<<<<<< HEAD
      <h5>Visualization 5:</h5>
      <p> In visualization V5 we create the line graph of atmospheric carbon dioxide concentrations based on ice drilling conducted at Soviet Vostok station in the Antarctic. The dataset has a Time period of 400000 years. The horizontal Axis is representation the years. According to a previous ice-drilling project between Russia, the United States, and France at the Russian Vostok station East Antarctica yielded the deepest ice core ever recovered, reaching a depth of 3,623 m (Petit et al. 1997, 1999). 
 The graph shows Temperature in the Antarctic is closely correlated with CO2 levels in the atmosphere (Barnola et al. 1987). The expansion of the Vostok CO2 dataset demonstrates that the major CO2 trends for each glacial cycle are comparable. Transitions between glacial and interglacial periods are characterized by significant changes from the lowest to the greatest levels. The atmospheric CO2 concentrations increase during these transitions from 180 to 280–300 ppmv (Petit et al. 1999). In the past 30,000–40,000 years, there has been a good agreement between the Vostok ice core data and other ice core data (Delmas et al. 1980; Neftel et al. 1982). All the records show low CO2 values [200 parts per million by volume (ppmv)] during the Last Glacial Maximum and increased atmospheric CO2 concentrations associated with the glacial–Holocene transition. These measurements, according to Barnola et al. (1991) and Petit et al. (1999), show that the CO2 increase either was in phase with the Antarctic temperature at the beginning of the deglaciations or lagged by less than 1000 years, whereas it clearly lagged the temperature at the beginning of the glaciations.
 </p>
+=======
+     <br></br>
+>>>>>>> 6daba7f84a8d76f167d0d537ea3cb254e57928bf
     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button> Know more about the data mesaurements! </button> </a>
     <br>
-    </br>
+    </br><br></br>
     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
      
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
+<<<<<<< HEAD
      <p>Visualization 6
 In V6 we created a line graph of atmospheric carbon dioxide concentrations based on a combined study of ice cores in the southern hemisphere. If we look at the graph the horizontal axis represents the years, and the graph illustrates the CO2 records using different air extraction methods and sections of the core. We have used Antarctic Ice Cores Revised 800KYr CO2 Data, which was obtained by European Project for Ice Coring in Antarctica Dome ice core from Dome C (EDC). The Antarctic composite ice core atmospheric CO2 is shown over 800,000 years, including some very recent studies, e.g., covering the last glacial cycle.
 </p>
+=======
+     <br></br>
+>>>>>>> 6daba7f84a8d76f167d0d537ea3cb254e57928bf
     <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975"><button> Know more about the data mesaurements! </button> </a>
     <br>
-    </br>
+    </br><br></br>
     <a href = "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
     
+<<<<<<< HEAD
      <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
      <p>Visualization 7: In Visualization 7 we created a multi-axis line chart, where we plotted the temperature record from the available 2m year period in combination with the available co2 measurements from the 800k year period. The horizontal axis represents the time in years, and the right vertical axis represents the change in temperature and the left vertical axis is showing the change in the Co2 ppm axis. The multi-line chart graph displays the data in two different colors, where cyan color is showing the temperature and the red color is showing C02.
 Only a few discrete windows of time in history of the world’s temperature have been accurately rebuilt, and continuous reconstructions of time in history throughout glacial cycles are still difficult. At the mid- Pleistocene transition, the switch from quasi-100,000-year glacial cycles to quasi-100,000-year glacial cycles may have been a prerequisite, albeit it is likely not the only causative process. A new reconstruction is compared to radiative forcing from greenhouse gases to assess the sensitivity of the Earth system, which is estimated to alter by 9 degrees Celsius (with a range of 7 to 13 degrees Celsius) every doubling of atmospheric carbon dioxide over millennia</p>
+=======
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> <br></br>
+>>>>>>> 6daba7f84a8d76f167d0d537ea3cb254e57928bf
      <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button> Know more about the data mesaurements! </button> </a>
      <br>
-    </br>
+    </br><br></br>
     <a href = "http://carolynsnyder.com/publications.php"><button> See the Dataset here!</button> </a>
      <br>
      </br>
