@@ -65,14 +65,19 @@ const Home=()=>{
             <h1> Visualizations:(1-7)</h1> 
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
+    <br></br>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button> Know more about the data mesaurements! </button> </a>
-    <br>
-    </br>
+    <br></br>
+    <br></br>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html"><button> See the Dataset here!</button> </a>
-    <br>
-    </br>
+    <br></br>
+      <br></br>
+      <div id='Vis2'>
 
-    <p> Visualisaton 2: The graph of Visualisation 2 represents the Northern Hemisphere’s
+        <h6>Visualisaton 2:</h6>
+      
+
+      <p>  The graph of Visualisation 2 represents the Northern Hemisphere’s
     2000-year temperature reconstruction.It is based on the Palaeoclimatological study of 2000 years of temperature. 
  The data used in the graph was reconstructed by “combining low-resolution proxies with tree-ring data, 
  using a wavelet transform technique to achieve timescale-dependent processing of the data.” ( Anders Moberg et al.) 
@@ -83,25 +88,35 @@ const Home=()=>{
  where the x-axis of the graph represents the Time period in years and the y-axis of the graph represent the annual mean
   Temperature in Celsius.
 </p>
+
+      </div>
+   
 <br>
     </br>
     <a href = "https://bolin.su.se/data/moberg-2012-nh-1?n=moberg-2005"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br>
+    <br></br>
     <a href = "https://www.nature.com/articles/nature03265"><button> Read more about data mesaurements!</button> </a>
     <br>
     </br>
+    <br></br>
     <a href = "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/moberg2005/nhtemp-moberg2005.txt"><button> See the Dataset here!</button> </a>
     <br>
     </br>
+    <br></br>
       
 
 
      <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
-     <br>
-    </br>
+     <br></br>
+     <br></br>
+
+     <div id='Vis3'>
+      <br></br>
+     <h6>Visualisation 3:</h6>
      <p>
-     Visualisation 3: The graph above in Visualisation 3, shows the mean data of monthly and annual 
+      The graph above in Visualisation 3, shows the mean data of monthly and annual 
      atmospheric carbon dioxide concentrations made on Mauna Loa, Hawaii, over a period
       of 65 years. The time measurements started in the year 1958, C. David Keeling of
        the Scripps Institution of Oceanography, and last for over a period of 65 years.
@@ -114,14 +129,19 @@ const Home=()=>{
           gradually increased in the atmosphere over the period of 65 years. The data collected
            can also be used to reflect on the global atmospheric concentrations.
      </p>
+     </div>
+     
      <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br>
+    <br></br>
     <a href = "https://gml.noaa.gov/ccgg/trends/"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
-     <p> 
-     Visualisaton 4: The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
+    </br> <br></br>
+    <div id='Vis4'>
+      <h6>Visualisaton 4:</h6>
+    <p> 
+      The graph of Visualisation 4 shows the historical Atmospheric carbon dioxide
       concentrations based on Antarctic ice cores, over a period ~1000 years. The data was recorded
        over the period 1006 A.D.-1978 A.D., from the three ice cores DE08, DE08-02, and DSS, obtained
         at Law Dome, East Antarctica from year 1987 to 1993. The line chart graph displays the three 
@@ -136,35 +156,39 @@ const Home=()=>{
             In addition to this, Mauna Loa CO2 atmospheric concentration levels follows the same pattern as 
             the Antarctic ice core CO2 levels.
      </p>
+    </div>
+     
      <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/lawdome.html"><button> Know more about the data mesaurements! </button> </a>
      <br>
-    </br>
+    </br><br></br>
     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
      
      
      <VostokIceCore vostok = {vostokIce} />
+     <br></br>
     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button> Know more about the data mesaurements! </button> </a>
     <br>
-    </br>
+    </br><br></br>
     <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
      
 
      <IceCoreKGraph iceCoreK = {IceCoreYears} />
+     <br></br>
     <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975"><button> Know more about the data mesaurements! </button> </a>
     <br>
-    </br>
+    </br><br></br>
     <a href = "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt"><button> See the Dataset here!</button> </a>
     <br>
-    </br>
+    </br><br></br>
     
-     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> <br></br>
      <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button> Know more about the data mesaurements! </button> </a>
      <br>
-    </br>
+    </br><br></br>
     <a href = "http://carolynsnyder.com/publications.php"><button> See the Dataset here!</button> </a>
      <br>
      </br>
