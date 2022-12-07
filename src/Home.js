@@ -204,6 +204,7 @@ In V6 we created a line graph of atmospheric carbon dioxide concentrations based
     
  
      <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <br></br>
      <div id='Vis7' >
       <h6>Visualization 7:</h6>
      <p> we created a multi-axis line chart, where we plotted the temperature record from the available 2m year period in combination with the available co2 measurements from the 800k year period. The horizontal axis represents the time in years, and the right vertical axis represents the change in temperature and the left vertical axis is showing the change in the Co2 ppm axis. The multi-line chart graph displays the data in two different colors, where cyan color is showing the temperature and the red color is showing C02.
