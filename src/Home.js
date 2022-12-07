@@ -66,10 +66,10 @@ const Home=()=>{
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
     <br></br>
-    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br></br>
     <br></br>
-    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html"><button> See the Dataset here!</button> </a>
+    <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/current/download.html" target="_blank"><button> See the Dataset here!</button> </a>
     <br></br>
       <br></br>
       <div id='Vis2'>
@@ -93,15 +93,15 @@ const Home=()=>{
    
 <br>
     </br>
-    <a href = "https://bolin.su.se/data/moberg-2012-nh-1?n=moberg-2005"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://bolin.su.se/data/moberg-2012-nh-1?n=moberg-2005" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br>
     <br></br>
-    <a href = "https://www.nature.com/articles/nature03265"><button> Read more about data mesaurements!</button> </a>
+    <a href = "https://www.nature.com/articles/nature03265" target="_blank"><button> Read more about data mesaurements!</button> </a>
     <br>
     </br>
     <br></br>
-    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/moberg2005/nhtemp-moberg2005.txt"><button> See the Dataset here!</button> </a>
+    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/moberg2005/nhtemp-moberg2005.txt" target="_blank"><button> See the Dataset here!</button> </a>
     <br>
     </br>
     <br></br>
@@ -131,11 +131,11 @@ const Home=()=>{
      </p>
      </div>
      
-     <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html"><button> Know more about the data mesaurements! </button> </a>
+     <a href = "https://gml.noaa.gov/ccgg/about/co2_measurements.html" target="_blank"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br>
     <br></br>
-    <a href = "https://gml.noaa.gov/ccgg/trends/"><button> See the Dataset here!</button> </a>
+    <a href = "https://gml.noaa.gov/ccgg/trends/" target="_blank"><button> See the Dataset here!</button> </a>
     <br>
     </br> <br></br>
     <div id='Vis4'>
@@ -158,10 +158,10 @@ const Home=()=>{
      </p>
     </div>
      
-     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/lawdome.html"><button> Know more about the data mesaurements! </button> </a>
+     <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/lawdome.html" target="_blank"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br><br></br>
-    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat"><button> See the Dataset here!</button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat" target="_blank"><button> See the Dataset here!</button> </a>
     <br>
     </br><br></br>
      
@@ -175,10 +175,10 @@ const Home=()=>{
 The graph shows Temperature in the Antarctic is closely correlated with CO2 levels in the atmosphere (Barnola et al. 1987). The expansion of the Vostok CO2 dataset demonstrates that the major CO2 trends for each glacial cycle are comparable. Transitions between glacial and interglacial periods are characterized by significant changes from the lowest to the greatest levels. The atmospheric CO2 concentrations increase during these transitions from 180 to 280–300 ppmv (Petit et al. 1999). In the past 30,000–40,000 years, there has been a good agreement between the Vostok ice core data and other ice core data (Delmas et al. 1980; Neftel et al. 1982). All the records show low CO2 values [200 parts per million by volume (ppmv)] during the Last Glacial Maximum and increased atmospheric CO2 concentrations associated with the glacial–Holocene transition. These measurements, according to Barnola et al. (1991) and Petit et al. (1999), show that the CO2 increase either was in phase with the Antarctic temperature at the beginning of the deglaciations or lagged by less than 1000 years, whereas it clearly lagged the temperature at the beginning of the glaciations.
 </p></div>
      
-    <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br><br></br>
-    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2"><button> See the Dataset here!</button> </a>
+    <a href = "https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2" target="_blank"><button> See the Dataset here!</button> </a>
     <br>
     </br><br></br>
      
@@ -195,10 +195,10 @@ In V6 we created a line graph of atmospheric carbon dioxide concentrations based
 
      </div>
      
-    <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975"><button> Know more about the data mesaurements! </button> </a>
+    <a href = "https://www.ncei.noaa.gov/access/paleo-search/study/17975" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br>
     </br><br></br>
-    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt"><button> See the Dataset here!</button> </a>
+    <a href = "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt" target="_blank"><button> See the Dataset here!</button> </a>
     <br>
     </br><br></br>
     
@@ -211,10 +211,10 @@ In V6 we created a line graph of atmospheric carbon dioxide concentrations based
 Only a few discrete windows of time in history of the world’s temperature have been accurately rebuilt, and continuous reconstructions of time in history throughout glacial cycles are still difficult. At the mid- Pleistocene transition, the switch from quasi-100,000-year glacial cycles to quasi-100,000-year glacial cycles may have been a prerequisite, albeit it is likely not the only causative process. A new reconstruction is compared to radiative forcing from greenhouse gases to assess the sensitivity of the Earth system, which is estimated to alter by 9 degrees Celsius (with a range of 7 to 13 degrees Celsius) every doubling of atmospheric carbon dioxide over millennia</p>
      
      </div>
-     <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf"><button> Know more about the data mesaurements! </button> </a>
+     <a href = "https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf" target="_blank"><button> Know more about the data mesaurements! </button> </a>
      <br>
     </br><br></br>
-    <a href = "http://carolynsnyder.com/publications.php"><button> See the Dataset here!</button> </a>
+    <a href = "http://carolynsnyder.com/publications.php" target="_blank"><button> See the Dataset here!</button> </a>
      <br>
      </br>
      <br>
