@@ -66,6 +66,12 @@ const Home=()=>{
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
     <br></br>
+    <h2>Visualisation 1: </h2>
+    <p>The graph of Visualisation 1 represents the Global historical surface temperature. The graph shows the Annual,
+       and Monthly surface temperature for Global level , Northern Hemisphere and  Southern Hemisphere. The x-axis 
+      represents the time, in years and the y-axis represents global srface temperature.
+
+    </p>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br></br>
     <br></br>
@@ -85,7 +91,7 @@ const Home=()=>{
  twentieth century before 1990—occurred around AD 1000 to 1100, and minimum temperatures that are about 0.7 K 
  below the average of 1961–90 occurred around AD 1600.” (Anders Moberg et al.) In V2 graph, represented with 
  brown line graph we get to see the change in the Northern Hemisphere’s mean temperature over the period of 2000 years, 
- where the x-axis of the graph represents the Time period in years and the y-axis of the graph represent the annual mean
+ where the x-axis of the graph represents the Time period in years and the y-axis of the graph represents the annual mean
   Temperature in Celsius.
 </p>
 

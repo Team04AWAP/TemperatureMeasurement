@@ -1,12 +1,12 @@
-/*const Login=()=>{
+const Login=()=>{
     return(
         <div>
             Login
         </div>
     )
-}*/
+}
 
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
  
 function Login(props) {
   const email = useFormInput('');
@@ -16,7 +16,7 @@ function Login(props) {
  
   // handle button click of login form
   const handleLogin = () => {
-    props.history.push('/dashboard');
+    //props.history.push('/dashboard');
   }
  
   return (
@@ -46,6 +46,6 @@ const useFormInput = initialValue => {
     value,
     onChange: handleChange
   }
-}
+}*/
  
 export default Login;

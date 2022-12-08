@@ -4,7 +4,6 @@ import Home from './Home';
 import Login from './Login';
 import Signup from './Signup';
 import Page from './Page';
-import Dashboard from './dashboard'
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
