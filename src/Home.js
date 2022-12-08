@@ -70,6 +70,8 @@ const Home=()=>{
     <p>The graph of Visualisation 1 represents the Global historical surface temperature. The graph shows the Annual,
        and Monthly surface temperature for Global level , Northern Hemisphere and  Southern Hemisphere. The x-axis 
       represents the time, in years and the y-axis represents global srface temperature.
+      <br>
+      </br>
 
     </p>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/" target="_blank"><button> Know more about the data mesaurements! </button> </a>
