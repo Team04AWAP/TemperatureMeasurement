@@ -28,6 +28,8 @@ const Home=()=>{
     const [IceCoreYears, setIceCoreyears] = useState([])
     const [TwoMillionTemperature, setTwoMillionTemperature] = useState([])
     const [TwoMillionCo2, setTwoMillionCo2] = useState([])
+    const [V10Co2, setV10Co2] = useState([])
+    const [V4Co2, setV4Co2] = useState([])
 
  
   
@@ -53,6 +55,8 @@ const Home=()=>{
       setIceCoreyears(response.data.IceCoreYears)
       setTwoMillionTemperature(response.data.TwoMillionTemperature)
       setTwoMillionCo2(response.data.TwoMillionCo2)
+      setV10Co2(response.data.V10Co2)
+      setV4Co2(response.data.V4Co2)
       
       
            
@@ -116,7 +120,7 @@ const Home=()=>{
       
 
 
-     <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
+     <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss} co2data6 = {V4Co2} />
      <br></br>
      <br></br>
 
@@ -211,7 +215,7 @@ In V6 we created a line graph of atmospheric carbon dioxide concentrations based
     </br><br></br>
     
  
-     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} v7data3 = {V10Co2}/> 
      <br></br>
      <div id='Vis7' >
       <h6>Visualization 7:</h6>
