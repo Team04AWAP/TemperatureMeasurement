@@ -76,7 +76,7 @@ export default function Co2MonthGraphdemo(props) {
         label: "History",
         //data: [...co2data].reverse(),
         data: [...props.co2data6],
-        borderColor: "#B7FA42",
+        borderColor: "##B7FA42",
         backgroundColor: "#B7FA42",
         showLine: false,
         //yAxisID: "Co2",
@@ -93,6 +93,15 @@ export default function Co2MonthGraphdemo(props) {
   const options = {
     responsive: true,
     plugins: {
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            console.log(context);
+            return context.raw.Events;
+          },
+
+        },
+      },
       legend: {
         position: "top",
       },

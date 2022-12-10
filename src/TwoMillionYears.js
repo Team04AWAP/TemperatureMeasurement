@@ -113,6 +113,16 @@ export default function TwoMillionYearsGraphdemo(props) {
   const options = {
     responsive: true,
     plugins: {
+      tooltip: {
+        
+        callbacks: {
+          label: (context) => {
+            console.log(context);
+            return context.raw.Events;
+          },
+
+        },
+      },
       legend: {
         position: "top",
       },
@@ -123,12 +133,6 @@ export default function TwoMillionYearsGraphdemo(props) {
     },
     
   scales: {
-    x: {
-      suggestedMin: -200000,
-      suggestedMax: 2022
-      
-    },
-   
       y: {
         type: 'linear',
         display: true,
