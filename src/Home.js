@@ -73,7 +73,7 @@ const Home=()=>{
     <h2>Visualisation 1: </h2>
     <p>The graph of Visualisation 1 represents the Global historical surface temperature. The graph shows the Annual,
        and Monthly surface temperature for Global level , Northern Hemisphere and  Southern Hemisphere. The x-axis 
-      represents the time, in years and the y-axis represents global srface temperature.
+      represents the time, in years and the y-axis represents global surface temperature.
       <br>
       </br>
 
