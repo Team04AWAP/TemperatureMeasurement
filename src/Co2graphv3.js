@@ -72,6 +72,20 @@ export default function Co2MonthGraphdemo(props) {
         },
         pointRadius: 1,
       }, 
+      {
+        label: "History",
+        //data: [...co2data].reverse(),
+        data: [...props.co2data6],
+        borderColor: "##B7FA42",
+        backgroundColor: "#B7FA42",
+        showLine: false,
+        //yAxisID: "Co2",
+        parsing: {
+          xAxisKey: "Time",
+          yAxisKey: "Co2",
+        },
+        pointRadius: 1,
+      }, 
       
     ],
   };
@@ -79,6 +93,15 @@ export default function Co2MonthGraphdemo(props) {
   const options = {
     responsive: true,
     plugins: {
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            console.log(context);
+            return context.raw.Events;
+          },
+
+        },
+      },
       legend: {
         position: "top",
       },
@@ -102,7 +125,7 @@ export default function Co2MonthGraphdemo(props) {
 
   return (
     <div style={{ width: "80%" }}>
-      <h1>Visualization 3 & 4 </h1>
+      <h1>Visualization 3,4 & 10 </h1>
       <Line options={options} data={data} />
     </div>
   );

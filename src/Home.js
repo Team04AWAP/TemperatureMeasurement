@@ -28,6 +28,8 @@ const Home=()=>{
     const [IceCoreYears, setIceCoreyears] = useState([])
     const [TwoMillionTemperature, setTwoMillionTemperature] = useState([])
     const [TwoMillionCo2, setTwoMillionCo2] = useState([])
+    const [V10Co2, setV10Co2] = useState([])
+    const [V4Co2, setV4Co2] = useState([])
 
  
   
@@ -53,6 +55,8 @@ const Home=()=>{
       setIceCoreyears(response.data.IceCoreYears)
       setTwoMillionTemperature(response.data.TwoMillionTemperature)
       setTwoMillionCo2(response.data.TwoMillionCo2)
+      setV10Co2(response.data.V10Co2)
+      setV4Co2(response.data.V4Co2)
       
       
            
@@ -62,10 +66,18 @@ const Home=()=>{
   }, [])
     return(
         <div>
-            <h1> Visualizations:(1-7)</h1> 
+            <h1> Visualizations:(Temperature and Co2 impact over time)</h1> 
   
       <MixChartGraph data1 = {annualData} data2 = {monthlyData} data3 = {AnnualNorth} data4 = {MonthNorth} data5 = {AnnualSouth} data6 ={MonthSouth}  data7 = {TwoThousand} />
     <br></br>
+    <h2>Visualisation 1: </h2>
+    <p>The graph of Visualisation 1 represents the Global historical surface temperature. The graph shows the Annual,
+       and Monthly surface temperature for Global level , Northern Hemisphere and  Southern Hemisphere. The x-axis 
+      represents the time, in years and the y-axis represents global surface temperature.
+      <br>
+      </br>
+
+    </p>
     <a href = "https://www.metoffice.gov.uk/hadobs/hadcrut5/" target="_blank"><button> Know more about the data mesaurements! </button> </a>
     <br></br>
     <br></br>
@@ -85,7 +97,7 @@ const Home=()=>{
  twentieth century before 1990—occurred around AD 1000 to 1100, and minimum temperatures that are about 0.7 K 
  below the average of 1961–90 occurred around AD 1600.” (Anders Moberg et al.) In V2 graph, represented with 
  brown line graph we get to see the change in the Northern Hemisphere’s mean temperature over the period of 2000 years, 
- where the x-axis of the graph represents the Time period in years and the y-axis of the graph represent the annual mean
+ where the x-axis of the graph represents the Time period in years and the y-axis of the graph represents the annual mean
   Temperature in Celsius.
 </p>
 
@@ -108,7 +120,7 @@ const Home=()=>{
       
 
 
-     <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss}/>
+     <Co2MonthGraphdemo co2data1 ={co2Month} co2data2 ={co2Annual} co2data3 = {iceCoreDe} co2data4 = {iceCoreDe2} co2data5 = {iceCoreDss} co2data6 = {V4Co2} />
      <br></br>
      <br></br>
 
@@ -203,7 +215,7 @@ In V6 we created a line graph of atmospheric carbon dioxide concentrations based
     </br><br></br>
     
  
-     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} /> 
+     <TwoMillionYearsGraphdemo v7data1 = {TwoMillionTemperature}  v7data2 = {TwoMillionCo2} v7data3 = {V10Co2}/> 
      <br></br>
      <div id='Vis7' >
       <h6>Visualization 7:</h6>

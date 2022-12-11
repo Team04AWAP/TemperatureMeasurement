@@ -91,13 +91,38 @@ export default function TwoMillionYearsGraphdemo(props) {
         },
         pointRadius: 1,
       },
+      {
+        label: "History",
+        //data: [...co2data].reverse(),
+        data: [...props.v7data3],
+        borderColor: "#825FFA",
+        backgroundColor: "#825FFA",
+        showLine: false,
+        yAxisID: "Co2",
+        parsing: {
+          xAxisKey: "Time",
+          yAxisKey: "Co2",
+        },
+        pointRadius: 1,
+      }, 
       
     ],
   };
-
+  
+   
   const options = {
     responsive: true,
     plugins: {
+      tooltip: {
+        
+        callbacks: {
+          label: (context) => {
+            console.log(context);
+            return context.raw.Events;
+          },
+
+        },
+      },
       legend: {
         position: "top",
       },
@@ -108,7 +133,6 @@ export default function TwoMillionYearsGraphdemo(props) {
     },
     
   scales: {
-   
       y: {
         type: 'linear',
         display: true,
@@ -124,7 +148,7 @@ export default function TwoMillionYearsGraphdemo(props) {
 
   return (
     <div style={{ width: "80%" }}>
-      <h1>Visualization 7 </h1>
+      <h1>Visualization 7 & 10 </h1>
       <Line options={options} data={data} />
     </div>
   );
