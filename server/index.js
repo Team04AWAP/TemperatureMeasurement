@@ -8,6 +8,10 @@ const mysql = require('mysql2/promise')
 const config = require('./config')
 const connect = require('./connect')
 const app = express()
+const connect = require('./connect')
+const jwt = require('becrypt');
+const tokensecret = "secret";
+const saltRounds = 10;
 
 
 
@@ -112,6 +116,8 @@ app.get("/v1data",async function (req,res) {
 
 app.post("/signUp",async function (req,res) {
     try { 
+
+        
         const connection = await mysql.createConnection(connect.db)
         const email = await connection.execute('insert * into email ')
         const Password = await connection.execute('insert * into Password ')
