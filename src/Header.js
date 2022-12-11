@@ -1,5 +1,9 @@
+import { react } from '@babel/types';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-const Header=()=> {
+import{ useState, useState} from react;
+import { useNavigate} from "react-router-dom";
+
+const Header=(props) => {
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <a className="navbar-brand" href="#">ClimateApp</a>

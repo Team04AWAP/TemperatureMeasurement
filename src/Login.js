@@ -1,51 +1,87 @@
-const Login=()=>{
-    return(
-        <div>
-            Login
-        </div>
-    )
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+ const Login =(props) {
+
+  const navigate = useNavigate(); //Use for Navigate on previous
+  cosnt [ DataTransfer, setData] = useState({
+    email: "",
+    password:"",
+  })
+
+  // handle button click of login form
+  const handleChange = (e) => {
+    setData({ ...DataTransfer, [e.target.name]: e.target.value});
+    
+  }
+ 
+  //login form submission
+const submitForm = (e) => {
+ e.preventDefault();
+ const sendData = {
+  email: DataTransfer.email,
+  password: DataTransfer.password
+ }
+
+
+  axios.post("http://localhost:3001/login", sendData)
+  .then((result) => {
+    alert(result.data.message);
+    localStorage.setItem('token',result.data.token);
+    localStorage.setItem('firstname', result.data.firstname);
+    localStorage.setItem('lastname', result.data.lastname);
+    localStorage.setItem('email', result.data.email);
+    localStorage.setItem('userid', result.data.userid);
+    localStorage.setItem('urlmappings', JSON.stringify(result.data.urlmappings));
+    props.setLoggedIn(true);
+    navigate("/dashboard");
+  }, (err) => { alert(err.response.data.message)})
 }
 
-/*import React, { useState } from 'react';
- 
-function Login(props) {
-  const email = useFormInput('');
-  const password = useFormInput('');
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
- 
-  // handle button click of login form
-  const handleLogin = () => {
-    //props.history.push('/dashboard');
+useEffect(() => {
+  if(localStorage.getItem("token")){
+    navigate("/dashboard");
   }
- 
-  return (
-    <div>
-      Login<br /><br />
-      <div>
-        Username<br />
-        <input type="text" {...email} autoComplete="new-password" />
-      </div>
-      <div style={{ marginTop: 10 }}>
-        Password<br />
-        <input type="password" {...password} autoComplete="new-password" />
-      </div>
-      {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
-      <input type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} disabled={loading} /><br />
-    </div>
-  );
+});
+
+return (
+  <div className="main-box">
+      <form onSubmit={submitForm}>
+          <div className="row">
+              <div className="col-md-12 text-center"><h1>Login</h1>
+              </div>
+              <div className="row">
+                  <div className="col-md-6">Email</div>
+                  <div className="col-md-6">
+                      <input type="email" name="email" className="form-control"
+                          onChange={handleChange} value={data.email} required
+                      />
+                  </div>
+              </div>
+
+              <div className="row">
+                  <div className="col-md-6">Password</div>
+                  <div className="col-md-6">
+                      <input type="password" name="password" className="form-control"
+                          onChange={handleChange} value={data.password} required
+                      />
+                  </div>
+              </div>
+
+              <div className="row">
+                  <div className="col-md-12 text-cener">
+                      <input type="submit" name="submit" value="Login" className="btn btn-success" />
+                  </div>
+              </div>
+          </div>
+      </form>
+
+  </div>
+
+
+
+)
 }
- 
-const useFormInput = initialValue => {
-  const [value, setValue] = useState(initialValue);
- 
-  const handleChange = e => {
-    setValue(e.target.value);
-  }
-  return {
-    value,
-    onChange: handleChange
-  }
-}*/
  
 export default Login;
