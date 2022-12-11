@@ -7,8 +7,9 @@ const cors = require('cors')
 const mysql = require('mysql2/promise')
 const config = require('./config')
 const connect = require('./connect')
-
 const app = express()
+
+
 
 app.use(cors())
 app.use(express.json())
