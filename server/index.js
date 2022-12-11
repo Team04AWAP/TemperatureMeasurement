@@ -10,7 +10,7 @@ const connect = require('./connect')
 
 const app = express()
 const bcrypt = require('bcrypt');
-const jwt = require('jasonwebtoken');
+const jwt = require('jsonwebtoken');
 const tokensecret = "secret";
 const saltRounds = 10;
 
@@ -150,6 +150,7 @@ app.post("/generatemapping", async function (req, res) {
         res.status(500).json({ error: "Could not create resource page" })
     }
 })
+
 app.get("/mappings", async function (req, res) {
     try {
         const connection = await mysql.createConnection(connect.db)
@@ -183,6 +184,7 @@ app.get("/deletemapping", async function (req, res) {
         res.status(500).json({ error: "Could not create resource page" })
     }
 })
+
 app.get("/deleteuser", async function (req, res) {
     try {
         const connection = await mysql.createConnection(connect.db)

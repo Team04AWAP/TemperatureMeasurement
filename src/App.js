@@ -26,7 +26,6 @@ function App() {
 
   return (
      <BrowserRouter>
-
        <div className = "container-fluid p-0">
         <Header isLoggedIn={isLoggedIn} loggedOut={userLogout}/>
         <Routes>
