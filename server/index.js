@@ -51,6 +51,8 @@ app.get("/v1data",async function (req,res) {
         const [IceCoreYears,] = await connection.execute('select * from iceCore800K')
         const [TwoMillionTemperature,] = await connection.execute('select * from 2mYearTemperature')
         const [TwoMillionCo2,] = await connection.execute('select * from 2mYearCo2')
+        const [V10Co2,] = await connection.execute('select * from humanEvolution7Co2')
+        const [V4Co2,] = await connection.execute('select * from humanEvolution4Co2')
         //const [Doughnut,] = await connection.execute('select * from doughnutChart')
         //const [Doughnut2,] = await connection.execute('select * from doughnutChart2')
        
@@ -69,7 +71,10 @@ app.get("/v1data",async function (req,res) {
         if (!vostokIce) vostokIce=[]  
         if (!IceCoreYears) IceCoreYears=[]   
         if (!TwoMillionTemperature) TwoMillionTemperature=[]   
-        if (!TwoMillionCo2) TwoMillionCo2=[]  
+        //if (!Doughnut) Doughnut=[] 
+        //if (!Doughnut2) Doughnut2=[] 
+        if (!V10Co2) V10Co2=[]   
+        if (!V4Co2) V4Co2=[]    
      
         /*const [result,] = await connection.execute('select * from annualData')
         if (!result) result=[] 
@@ -92,7 +97,9 @@ app.get("/v1data",async function (req,res) {
         IceCoreYears: IceCoreYears,
         TwoMillionTemperature: TwoMillionTemperature,
         TwoMillionCo2: TwoMillionCo2,
-        //Doughnut: Doughnut,
+        V10Co2: V10Co2,
+        V4Co2: V4Co2,
+       // Doughnut: Doughnut,
         //Doughnut2: Doughnut2
        });
         
@@ -144,11 +151,14 @@ app.get("/v2data",async function (req,res) {
         const connection = await mysql.createConnection(config.db)
         const [Doughnut,] = await connection.execute('select * from doughnutChart')
         const [Doughnut2,] = await connection.execute('select * from doughnutChart2')
+        const [Doughnut3,] = await connection.execute('select * from doughnutChart3')
         if (!Doughnut) Doughnut=[]  
         if (!Doughnut2) Doughnut2=[] 
+        if (!Doughnut3) Doughnut3=[] 
         res.json({ 
             Doughnut: Doughnut,
-            Doughnut2: Doughnut2
+            Doughnut2: Doughnut2,
+            Doughnut3: Doughnut3
            });
             
         } catch(err) {

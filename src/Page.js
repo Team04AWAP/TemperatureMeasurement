@@ -9,15 +9,14 @@ const URL = 'http://localhost:3001/v2data'
 
 const Page =()=>{
 
-    const [Doughnut, setDoughtnut] = useState([])
-    //const [Doughtnut2, setDoughtnut2] = useState([])
+  const [DoughnutData, setDoughnutData] = useState([])
     
 
     useEffect (() => {
         axios.get(URL)
-        .then((response) => {
+          .then((res) => {
           debugger
-          setDoughtnut(response.data.Doughnut)
+          setDoughnutData(res.data)
           //setDoughtnut2(response.data.Doughtnut2)
           
         }).catch (error => {
@@ -27,8 +26,8 @@ const Page =()=>{
 
           return(
               <div>
-                  <h1> Visualizations:(8-10)</h1> 
-                  <DoughnutChartGraph v9data1 = {Doughnut} /> 
+                  <h1> Visualizations:(Temperature and Co2 impact over time)</h1> 
+                  <DoughnutChartGraph doughnutData = {DoughnutData} />
           <br>
           </br>
           <br>
