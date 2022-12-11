@@ -41,7 +41,9 @@ const Header = (props) => {
             <li className="nav-item" key={1}>
               <Link to="/signup" className="nav-link">Signup</Link>
             </li>
-           
+            <li className="nav-item" key={2}>
+              <Link to="/login" className="nav-link">Login</Link>
+            </li>
           </ul>
         </div>
       </nav>
