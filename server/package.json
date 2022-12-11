@@ -13,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "jwplatform": "^0.0.6",
     "luxon": "^3.1.0",
     "mysql2": "^2.3.3"
   },

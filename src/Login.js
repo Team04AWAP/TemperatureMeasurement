@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
- const Login =(props) {
+ const Login =(props) => {
 
   const navigate = useNavigate(); //Use for Navigate on previous
   cosnt [ DataTransfer, setData] = useState({
@@ -12,16 +12,15 @@ import { useNavigate } from 'react-router-dom';
 
   // handle button click of login form
   const handleChange = (e) => {
-    setData({ ...DataTransfer, [e.target.name]: e.target.value});
-    
+    setData({ ...data, [e.target.name]: e.target.value});
   }
  
   //login form submission
 const submitForm = (e) => {
  e.preventDefault();
  const sendData = {
-  email: DataTransfer.email,
-  password: DataTransfer.password
+  email: data.email,
+  password: data.password
  }
 
 
@@ -45,6 +44,7 @@ useEffect(() => {
   }
 });
 
+//loginform
 return (
   <div className="main-box">
       <form onSubmit={submitForm}>
@@ -59,6 +59,7 @@ return (
                       />
                   </div>
               </div>
+
 
               <div className="row">
                   <div className="col-md-6">Password</div>
@@ -78,8 +79,6 @@ return (
       </form>
 
   </div>
-
-
 
 )
 }

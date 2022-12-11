@@ -195,6 +195,53 @@ app.get("/deleteuser", async function (req, res) {
         res.status(500).json({ error: "Could not create resource page" })
     }
 })
+app.post("/login", async function (req, res) {
+    try {
+        const connection = await mysql.createConnection(connect.db)
+        const [user,] = await connection.execute('select * from user where email="' + req.body.email + '"')
+        if (user.length === 0) {
+            res.status(500).json({
+                message: "User does not exist!"
+            });
+        }
+        else{
+            const [urlmappings,] = await connection.execute('select a.visualisations, a.layout, a.id as visualisationid, CONCAT(u.firstname, " ", u.lastname) as fullname, u.id as userid from url_mapping a left join user u on a.user = u.id where a.user="' + user[0].id + '" ')
+            bcrypt.compare(req.body.password, user[0].password, function(err, result) {
+                if(result){
+                        // Create token
+                    const token = jwt.sign(
+                        { id: user[0].id, email : req.body.email },
+                        tokensecret,
+                        {
+                        expiresIn: "2h",
+                        }
+                    );
+                    
+                    res.json({
+                        token: token,
+                        firstname: user[0].firstname,
+                        lastname: user[0].lastname,
+                        email: user[0].email,
+                        userid: user[0].id,
+                        urlmappings: urlmappings,
+                        message: "success"
+                    });
+                }
+                else{
+                    res.status(500).json({
+                        message: "User credentials do not match!"
+                    });
+                }
+            });
+
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message })
+    }
+})
+
+
+
 app.get("/v2data",async function (req,res) {
     try { 
         const connection = await mysql.createConnection(config.db)
