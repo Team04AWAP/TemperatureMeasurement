@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
  const Login =(props) => {
-
+const data = data
   const navigate = useNavigate(); //Use for Navigate on previous
-  cosnt [ DataTransfer, setData] = useState({
+  const [ DataTransfer, setData] = useState({
     email: "",
     password:"",
   })
