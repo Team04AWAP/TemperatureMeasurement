@@ -9,7 +9,6 @@ const config = require('./config')
 const connect = require('./connect')
 
 const app = express()
-const connect = require('./connect')
 const bcrypt = require('bcrypt');
 const jwt = require('jasonwebtoken');
 const tokensecret = "secret";
