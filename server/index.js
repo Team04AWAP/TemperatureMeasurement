@@ -10,7 +10,7 @@ const connect = require('./connect')
 
 const app = express()
 const bcrypt = require('bcrypt');
-const jwt = require('jasonwebtoken');
+const jwt = require('jsonwebtoken');
 const tokensecret = "secret";
 const saltRounds = 10;
 
