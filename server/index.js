@@ -7,8 +7,13 @@ const cors = require('cors')
 const mysql = require('mysql2/promise')
 const config = require('./config')
 const connect = require('./connect')
-
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const tokensecret = "secret";
+const saltRounds = 10;
 const app = express()
+
+
 
 app.use(cors())
 app.use(express.json())
@@ -102,41 +107,84 @@ app.get("/v1data",async function (req,res) {
     }
 })
 
-app.post("/signUp",async function (req,res) {
-    try { 
+app.post("/signUp", async function (req, res) {
+    try {
+        if (!(req.body.email && req.body.password && req.body.first_name && req.body.last_name)) {
+            res.status(400).send("Please enter all required fields");
+        }
         const connection = await mysql.createConnection(connect.db)
-        const email = await connection.execute('insert * into email ')
-        const Password = await connection.execute('insert * into Password ')
-        if (!email) email= ({})
-        if (!Password) Password= ({})
-        if (!firstname) firstname= ({})
-        if (!lastname) lastname= ({})
-        res.json({
-            email: email,
-            Password: Password,
-            firstname: firstname,
-            lastname: lastname
-
-    });
-} catch(err) {
-    
-    res.status(500).json({error: err.message})
-}
+        const [check, fields] = await connection.execute('select * from user where email="' + req.body.email + '"')
+        if (check.length === 0) {
+            // no user create
+            bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+                // Store hash in your password DB.
+                connection.execute('insert into user (firstname, lastname, email, password) values ("' + req.body.first_name + '", "' + req.body.last_name + '", "' + req.body.email + '", "' + hash + '")').then((data) => {
+                    res.json({ message: "User created successfully" });
+                })
+            });
+            
+        }
+        else
+            res.status(500).json({ message: "User with this email already exists" });
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not register user" })
+    }
 })
-
-app.get("/signUp",async function (req,res) {
-    try { 
+app.post("/generatemapping", async function (req, res) {
+    try {
         const connection = await mysql.createConnection(connect.db)
-        const [logIn,] = await connection.execute('select * from logIn')
-        if (!logIn) logIn= []
-        res.json({
-            logIn: logIn
-    });
-} catch(err) {
-
-        
-    res.status(500).json({error: err.message})
-}
+        connection.execute(`insert into url_mapping (visualisations, user, layout, description) values (?, "` + req.body.user + `", "` + req.body.layout + `", "` + req.body.description + `")`, [req.body.resource]).then((data) => {
+            res.json({ message: "Created resource page successfully" });
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not create resource page" })
+    }
+})
+app.get("/mappings", async function (req, res) {
+    try {
+        const connection = await mysql.createConnection(connect.db)
+        connection.execute(`select a.id, a.visualisations, a.layout, a.description, CONCAT(u.firstname, " ", u.lastname) as fullname from url_mapping a left join user u on a.user = u.id where a.user ="` + req.query.user + `"`).then((data) => {
+            res.json({ data : data[0] });
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not create resource page" })
+    }
+})
+app.get("/getmapping", async function (req, res) {
+    try {
+        const connection = await mysql.createConnection(connect.db)
+        connection.execute(`select a.id, a.visualisations, a.layout, a.description, CONCAT(u.firstname, " ", u.lastname) as fullname from url_mapping a left join user u on a.user = u.id where a.id ="` + req.query.id + `"`).then((data) => {
+            res.json({ data : data[0] });
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not create resource page" })
+    }
+})
+app.get("/deletemapping", async function (req, res) {
+    try {
+        const connection = await mysql.createConnection(connect.db)
+        connection.execute(`delete from url_mapping where id ="` + req.query.id + `"`).then((data) => {
+            res.json({ message: "success" });
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not create resource page" })
+    }
+})
+app.get("/deleteuser", async function (req, res) {
+    try {
+        const connection = await mysql.createConnection(connect.db)
+        connection.execute(`delete from user where id ="` + req.query.id + `"`).then((data) => {
+            res.json({ message: "success" });
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: "Could not create resource page" })
+    }
 })
 app.get("/v2data",async function (req,res) {
     try { 
