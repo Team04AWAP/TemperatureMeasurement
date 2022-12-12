@@ -126,7 +126,7 @@ export default function DoughnutChartGraph (props) {
 
 
       return (
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "40%" }}>
             <h1>Visualization 9 </h1>
             <Doughnut options={options} data={data} plugins={[ChartDataLabels]} />
           </div>

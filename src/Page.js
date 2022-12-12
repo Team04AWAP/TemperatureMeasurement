@@ -28,10 +28,8 @@ const Page =()=>{
               <div>
                   <h1> Visualizations:(Temperature and Co2 impact over time)</h1> 
                   <DoughnutChartGraph doughnutData = {DoughnutData} />
-          <br>
-          </br>
-          <br>
-          </br>
+          
+        
           <Link to = "/"><button>Go for Previous visualizations</button> </Link>
           </div>
     )
