@@ -89,7 +89,7 @@ const CreateMapping = () => {
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><input className="form-check-input me-2" type="checkbox" name="resource" value="3,4" onChange={handleCheckboxChange}/></th>
-                                                    <td colSpan="3">Visualization 3 & 4</td>
+                                                    <td colSpan="3">Visualization 3, 4 & 10</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><input className="form-check-input me-2" type="checkbox" name="resource" value="5" onChange={handleCheckboxChange}/></th>
@@ -101,11 +101,11 @@ const CreateMapping = () => {
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><input className="form-check-input me-2" type="checkbox" name="resource" value="7" onChange={handleCheckboxChange}/></th>
-                                                    <td colSpan="3">Visualization 7</td>
+                                                    <td colSpan="3">Visualization 7 & 10</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><input className="form-check-input me-2" type="checkbox" name="resource" value="8,9" onChange={handleCheckboxChange}/></th>
-                                                    <td colSpan="3">Visualization 8 & 9</td>
+                                                    <td colSpan="3">Visualization  9</td>
                                                 </tr>
                                             </tbody>
                                         </table>
