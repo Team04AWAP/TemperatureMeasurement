@@ -1,10 +1,14 @@
 import React from "react";
+import {useRef} from "react";
 import Chart from 'react-apexcharts';
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, getElementsAtEvent } from "react-chartjs-2";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 export default function DoughnutChartGraph (props) {
-    
+  const chartRef = useRef();
+
+ 
+  
     //console.log(props.doughnutData);
 
     if(props.doughnutData.length != 0){
@@ -14,7 +18,7 @@ export default function DoughnutChartGraph (props) {
       const doughnut2_data = [];
       const doughnut3_SubSectors = [];
       const doughnut3_data = [];
-
+ 
       props.doughnutData.Doughnut.forEach(element => {
         doughnut1_Sectors.push(element.sector);
         doughnut1_data.push(element.Co2);
@@ -28,6 +32,7 @@ export default function DoughnutChartGraph (props) {
         doughnut3_SubSectors.push(element.subSector);
         doughnut3_data.push(element.Co2);
       });
+   
 
       //console.log(doughnut1_Sectors);
       //console.log(doughnut1_data);
@@ -62,6 +67,7 @@ export default function DoughnutChartGraph (props) {
             labels: doughnut3_SubSectors,
             label: '',
             data: doughnut3_data,
+            link: "https://ourworldindata.org/emissions-by-sector#co2-emissions-by-sector",
             backgroundColor: bgColors3,
             hoverOffset: 4,
           },
@@ -69,6 +75,7 @@ export default function DoughnutChartGraph (props) {
           labels: doughnut2_SubSectors,
           label: '',
           data: doughnut2_data,
+          link: "https://ourworldindata.org/emissions-by-sector#co2-emissions-by-sector",
           backgroundColor: bgColors2,
           hoverOffset: 4,
         },
@@ -76,11 +83,13 @@ export default function DoughnutChartGraph (props) {
           labels: doughnut1_Sectors,
           label: '',
           data: doughnut1_data,
+          link: "https://ourworldindata.org/emissions-by-sector#co2-emissions-by-sector",
           backgroundColor: bgColors1,
           hoverOffset: 4,
         }
        ]
       };
+
 
       const options = {
         responsive: true,
@@ -124,11 +133,20 @@ export default function DoughnutChartGraph (props) {
         scales: {},
       };
 
+      const onClick = (event) => {
+        if(getElementsAtEvent(chartRef.current, event).length >0) {
+      const datasetIndexNum = getElementsAtEvent(chartRef.current, event)[0].datasetIndex;
+      window.open(data.datasets[datasetIndexNum].link, '-blank' )
+    }
+      }
+    
 
       return (
-          <div style={{ width: "40%" }}>
+          <div style={{ width: "50%" }}>
             <h1>Visualization 9 </h1>
-            <Doughnut options={options} data={data} plugins={[ChartDataLabels]} />
+            <Doughnut options={options} data={data} plugins={[ChartDataLabels]}  onClick = {onClick}
+            ref = {chartRef}/>
+            
           </div>
       );
 
@@ -141,5 +159,5 @@ export default function DoughnutChartGraph (props) {
         </div>
     );
     }
+  }
     
-}
