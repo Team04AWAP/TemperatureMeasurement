@@ -9,8 +9,8 @@ import IceCoreKGraph from './IceCore800K';
 import TwoMillionYearsGraphdemo from './TwoMillionYears';
 import { Link } from 'react-router-dom';
 import DoughnutChartGraph from './DoughnutChart';
-const URL = 'http://localhost:3001/v1data'
-const URL2 = 'http://localhost:3001/v2data'
+const URL = 'http://34.131.205.106:3001/v1data'
+const URL2 = 'http://34.131.205.106:3001/v2data'
 const VisualResource = () => {
     const navigate = useNavigate();
 
@@ -34,18 +34,20 @@ const VisualResource = () => {
     const [IceCoreYears, setIceCoreyears] = useState([])
     const [TwoMillionTemperature, setTwoMillionTemperature] = useState([])
     const [TwoMillionCo2, setTwoMillionCo2] = useState([])
-    const [Doughnut, setDoughtnut] = useState([])
+    const [DoughnutData, setDoughnutData] = useState([])
+    const [V4Co2, setV4Co2] = useState([])
+    const [V10Co2, setV10Co2] = useState([])
+    
     useEffect(() => {
         loaddata();
     }, []);
 
     const loaddata = () => {
-        axios.get("http://localhost:3001/getmapping?id=" + id)
+        axios.get("http://34.131.205.106:3001/getmapping?id=" + id)
             .then((result) => {
                 setData({ ...data, list: result.data.data[0], vlist: JSON.parse(result.data.data[0].visualisations) })
                 axios.get(URL)
                     .then((response) => {
-                        debugger
                         setannualData(response.data.annualData)
                         setmonthlyData(response.data.monthlyData)
                         setAnnualNorth(response.data.AnnualNorth)
@@ -62,11 +64,11 @@ const VisualResource = () => {
                         setIceCoreyears(response.data.IceCoreYears)
                         setTwoMillionTemperature(response.data.TwoMillionTemperature)
                         setTwoMillionCo2(response.data.TwoMillionCo2)
-
+                        setV4Co2(response.data.V4Co2)
+                        setV10Co2(response.data.V10Co2)
                         axios.get(URL2)
                             .then((response) => {
-                                debugger
-                                setDoughtnut(response.data.Doughnut)
+                                setDoughnutData(response.data)
                                 //setDoughtnut2(response.data.Doughtnut2)
 
                             }).catch(error => {
@@ -123,9 +125,9 @@ const VisualResource = () => {
                             <br></br>
                         </div>
                     }
-                    {el === "3,4" &&
+                    {el === "3,4,10" &&
                         <div>
-                            <Co2MonthGraphdemo co2data1={co2Month} co2data2={co2Annual} co2data3={iceCoreDe} co2data4={iceCoreDe2} co2data5={iceCoreDss} />
+                            <Co2MonthGraphdemo co2data1={co2Month} co2data2={co2Annual} co2data3={iceCoreDe} co2data4={iceCoreDe2} co2data5={iceCoreDss} co2data6={V4Co2} />
                             <br></br>
                             <h6>Visualisation 3:</h6>
                             <p>
@@ -213,9 +215,9 @@ const VisualResource = () => {
                             </div>
                         </div>
                     }
-                    {el === "7" &&
+                    {el === "7,10" &&
                         <div>
-                            <TwoMillionYearsGraphdemo v7data1={TwoMillionTemperature} v7data2={TwoMillionCo2} />
+                            <TwoMillionYearsGraphdemo v7data1={TwoMillionTemperature} v7data2={TwoMillionCo2} v7data3={V10Co2} />
                             <div id='Vis4'>
                                 <h6>Visualisation7:</h6>
                                 <p> we created a multi-axis line chart, where we plotted the temperature record from the available 2m year period in combination with the available co2 measurements from the 800k year period. The horizontal axis represents the time in years, and the right vertical axis represents the change in temperature and the left vertical axis is showing the change in the Co2 ppm axis. The multi-line chart graph displays the data in two different colors, where cyan color is showing the temperature and the red color is showing C02.
@@ -232,9 +234,9 @@ const VisualResource = () => {
                             </div>
                         </div>
                     }
-                    {el === "8,9" &&
+                    {el === "9" &&
                         <div>
-                            <DoughnutChartGraph v9data1={Doughnut} />
+                            <DoughnutChartGraph doughnutData = {DoughnutData} />
                             <Link to="/"><button>Go for Previous visualizations</button> </Link>
                         </div>
                     }
@@ -287,9 +289,9 @@ const VisualResource = () => {
                                 <br></br>
                             </div>
                         }
-                        {el === "3,4" &&
+                        {el === "3,4,10" &&
                             <div>
-                                <Co2MonthGraphdemo co2data1={co2Month} co2data2={co2Annual} co2data3={iceCoreDe} co2data4={iceCoreDe2} co2data5={iceCoreDss} />
+                                <Co2MonthGraphdemo co2data1={co2Month} co2data2={co2Annual} co2data3={iceCoreDe} co2data4={iceCoreDe2} co2data5={iceCoreDss} co2data6={V4Co2} />
                                 <br></br>
                                 <h6>Visualisation 3:</h6>
                                 <p>
@@ -377,9 +379,9 @@ const VisualResource = () => {
                                 </div>
                             </div>
                         }
-                        {el === "7" &&
+                        {el === "7,10" &&
                             <div>
-                                <TwoMillionYearsGraphdemo v7data1={TwoMillionTemperature} v7data2={TwoMillionCo2} />
+                                <TwoMillionYearsGraphdemo v7data1={TwoMillionTemperature} v7data2={TwoMillionCo2} v7data3={V10Co2} />
                                 <div id='Vis4'>
                                     <h6>Visualisation7:</h6>
                                     <p> we created a multi-axis line chart, where we plotted the temperature record from the available 2m year period in combination with the available co2 measurements from the 800k year period. The horizontal axis represents the time in years, and the right vertical axis represents the change in temperature and the left vertical axis is showing the change in the Co2 ppm axis. The multi-line chart graph displays the data in two different colors, where cyan color is showing the temperature and the red color is showing C02.
@@ -396,9 +398,9 @@ const VisualResource = () => {
                                 </div>
                             </div>
                         }
-                        {el === "8,9" &&
+                        {el === "9" &&
                             <div>
-                                <DoughnutChartGraph v9data1={Doughnut} />
+                                <DoughnutChartGraph doughnutData = {DoughnutData} />
                                 <Link to="/"><button>Go for Previous visualizations</button> </Link>
                             </div>
                         }
@@ -408,4 +410,4 @@ const VisualResource = () => {
         }
     </div >);
 }
-export default VisualResource;
+export default VisualResource;
